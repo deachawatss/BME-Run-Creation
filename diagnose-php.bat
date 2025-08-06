@@ -5,14 +5,14 @@ echo =====================================
 echo.
 
 echo Checking PHP installation...
-if exist "C:\php\php.exe" (
-    echo ✅ PHP found at C:\php\
+if exist "C:\webserver\php\php.exe" (
+    echo ✅ PHP found at C:\webserver\php\
     echo.
     echo PHP Version:
-    C:\php\php.exe -v
+    C:\webserver\php\php.exe -v
     echo.
 ) else (
-    echo ❌ PHP not found at C:\php\
+    echo ❌ PHP not found at C:\webserver\php\
     echo Please check PHP installation path
     goto :end
 )
@@ -20,23 +20,23 @@ if exist "C:\php\php.exe" (
 echo =====================================
 echo Loaded Extensions:
 echo =====================================
-C:\php\php.exe -m
+C:\webserver\php\php.exe -m
 
 echo.
 echo =====================================
 echo SQLSRV Extension Check:
 echo =====================================
-C:\php\php.exe -m | findstr -i sqlsrv
+C:\webserver\php\php.exe -m | findstr -i sqlsrv
 if %ERRORLEVEL% eql 0 (
     echo ✅ SQLSRV extensions are loaded
 ) else (
     echo ❌ SQLSRV extensions NOT loaded
     echo.
-    echo Available extensions in C:\php\ext\:
-    if exist "C:\php\ext\" (
-        dir C:\php\ext\*sqlsrv*.dll
+    echo Available extensions in C:\webserver\php\ext\:
+    if exist "C:\webserver\php\ext\" (
+        dir C:\webserver\php\ext\*sqlsrv*.dll
     ) else (
-        echo ❌ C:\php\ext\ directory not found
+        echo ❌ C:\webserver\php\ext\ directory not found
     )
 )
 
@@ -44,16 +44,16 @@ echo.
 echo =====================================
 echo php.ini Configuration:
 echo =====================================
-if exist "C:\php\php.ini" (
-    echo Current php.ini location: C:\php\php.ini
+if exist "C:\webserver\php\php.ini" (
+    echo Current php.ini location: C:\webserver\php\php.ini
     echo.
     echo SQLSRV extension entries:
-    findstr /C:"sqlsrv" "C:\php\php.ini"
+    findstr /C:"sqlsrv" "C:\webserver\php\php.ini"
     if %ERRORLEVEL% neq 0 (
         echo ❌ No SQLSRV extensions found in php.ini
     )
 ) else (
-    echo ❌ php.ini not found at C:\php\php.ini
+    echo ❌ php.ini not found at C:\webserver\php\php.ini
 )
 
 echo.

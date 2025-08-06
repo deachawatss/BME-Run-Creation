@@ -19,8 +19,8 @@ if !ERRORLEVEL! neq 0 (
 
 echo Step 1: Check PHP
 echo =================
-if not exist "C:\php\php.exe" (
-    echo ERROR: PHP not found at C:\php\
+if not exist "C:\webserver\php\php.exe" (
+    echo ERROR: PHP not found at C:\webserver\php\
     echo Install PHP 8.3 first
     echo.
     echo Press any key to exit...
@@ -28,12 +28,12 @@ if not exist "C:\php\php.exe" (
     exit /b 1
 )
 
-echo ✅ PHP found: C:\php\php.exe
+echo ✅ PHP found: C:\webserver\php\php.exe
 echo.
 
 echo Step 2: Create extension directory
 echo ==================================
-if not exist "C:\php\ext\" mkdir "C:\php\ext"
+if not exist "C:\webserver\php\ext\" mkdir "C:\webserver\php\ext"
 echo ✅ Extension directory ready
 echo.
 
@@ -53,7 +53,7 @@ echo.
 echo 3. Download PHP 8.3 SQLSRV Extensions:
 echo    https://github.com/Microsoft/msphpsql/releases/download/v5.12.0/Windows-8.1-5.12.0-8.3-ts-x64.zip
 echo.
-echo 4. Extract the ZIP file and copy these 2 files to C:\php\ext\:
+echo 4. Extract the ZIP file and copy these 2 files to C:\webserver\php\ext\:
 echo    - php_sqlsrv.dll
 echo    - php_pdo_sqlsrv.dll
 echo.
@@ -68,14 +68,14 @@ if /i "!answer!" neq "done" (
 echo.
 echo Step 4: Check files exist
 echo =========================
-if not exist "C:\php\ext\php_sqlsrv.dll" (
-    echo ❌ php_sqlsrv.dll not found in C:\php\ext\
+if not exist "C:\webserver\php\ext\php_sqlsrv.dll" (
+    echo ❌ php_sqlsrv.dll not found in C:\webserver\php\ext\
     echo Please copy the file and run this script again
     goto :end
 )
 
-if not exist "C:\php\ext\php_pdo_sqlsrv.dll" (
-    echo ❌ php_pdo_sqlsrv.dll not found in C:\php\ext\
+if not exist "C:\webserver\php\ext\php_pdo_sqlsrv.dll" (
+    echo ❌ php_pdo_sqlsrv.dll not found in C:\webserver\php\ext\
     echo Please copy the file and run this script again
     goto :end
 )
@@ -85,24 +85,24 @@ echo.
 
 echo Step 5: Update php.ini
 echo ======================
-if exist "C:\php\php.ini" (
-    copy "C:\php\php.ini" "C:\php\php.ini.backup" >nul
+if exist "C:\webserver\php\php.ini" (
+    copy "C:\webserver\php\php.ini" "C:\webserver\php\php.ini.backup" >nul
     echo ✅ Backed up php.ini
 ) else (
     echo Creating php.ini from php.ini-production...
-    copy "C:\php\php.ini-production" "C:\php\php.ini" >nul
+    copy "C:\webserver\php\php.ini-production" "C:\webserver\php\php.ini" >nul
 )
 
 REM Add extensions to php.ini
-findstr /C:"php_sqlsrv.dll" "C:\php\php.ini" >nul
+findstr /C:"php_sqlsrv.dll" "C:\webserver\php\php.ini" >nul
 if !ERRORLEVEL! neq 0 (
-    echo extension=php_sqlsrv.dll >> "C:\php\php.ini"
+    echo extension=php_sqlsrv.dll >> "C:\webserver\php\php.ini"
     echo ✅ Added php_sqlsrv.dll to php.ini
 )
 
-findstr /C:"php_pdo_sqlsrv.dll" "C:\php\php.ini" >nul
+findstr /C:"php_pdo_sqlsrv.dll" "C:\webserver\php\php.ini" >nul
 if !ERRORLEVEL! neq 0 (
-    echo extension=php_pdo_sqlsrv.dll >> "C:\php\php.ini"
+    echo extension=php_pdo_sqlsrv.dll >> "C:\webserver\php\php.ini"
     echo ✅ Added php_pdo_sqlsrv.dll to php.ini
 )
 
@@ -122,7 +122,7 @@ echo.
 echo Step 7: Test extensions
 echo =======================
 echo Checking loaded PHP extensions...
-C:\php\php.exe -m | findstr -i sqlsrv
+C:\webserver\php\php.exe -m | findstr -i sqlsrv
 if !ERRORLEVEL! equ 0 (
     echo.
     echo ✅ SUCCESS! SQLSRV extensions are now loaded

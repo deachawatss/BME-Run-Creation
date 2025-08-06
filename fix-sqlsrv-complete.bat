@@ -17,8 +17,8 @@ echo Step 1: Check current PHP configuration
 echo =====================================
 echo.
 
-if not exist "C:\php\php.exe" (
-    echo ERROR: PHP not found at C:\php\
+if not exist "C:\webserver\php\php.exe" (
+    echo ERROR: PHP not found at C:\webserver\php\
     pause
     exit /b 1
 )
@@ -69,9 +69,9 @@ powershell -Command "& {
         Expand-Archive -Path $output -DestinationPath 'C:\temp\sqlsrv' -Force
         
         Write-Host 'Copying extensions to PHP directory...'
-        if (-not (Test-Path 'C:\php\ext')) { New-Item -ItemType Directory -Path 'C:\php\ext' }
-        Copy-Item 'C:\temp\sqlsrv\php_sqlsrv.dll' 'C:\php\ext\' -Force
-        Copy-Item 'C:\temp\sqlsrv\php_pdo_sqlsrv.dll' 'C:\php\ext\' -Force
+        if (-not (Test-Path 'C:\webserver\php\ext')) { New-Item -ItemType Directory -Path 'C:\webserver\php\ext' }
+        Copy-Item 'C:\temp\sqlsrv\php_sqlsrv.dll' 'C:\webserver\php\ext\' -Force
+        Copy-Item 'C:\temp\sqlsrv\php_pdo_sqlsrv.dll' 'C:\webserver\php\ext\' -Force
         
         Write-Host 'Extensions copied successfully'
     } catch {
@@ -89,18 +89,18 @@ echo Step 4: Verify extension files exist
 echo =====================================
 echo.
 
-if exist "C:\php\ext\php_sqlsrv.dll" (
+if exist "C:\webserver\php\ext\php_sqlsrv.dll" (
     echo ✅ php_sqlsrv.dll found
 ) else (
     echo ❌ php_sqlsrv.dll NOT found
-    echo Please manually copy php_sqlsrv.dll to C:\php\ext\
+    echo Please manually copy php_sqlsrv.dll to C:\webserver\php\ext\
 )
 
-if exist "C:\php\ext\php_pdo_sqlsrv.dll" (
+if exist "C:\webserver\php\ext\php_pdo_sqlsrv.dll" (
     echo ✅ php_pdo_sqlsrv.dll found
 ) else (
     echo ❌ php_pdo_sqlsrv.dll NOT found  
-    echo Please manually copy php_pdo_sqlsrv.dll to C:\php\ext\
+    echo Please manually copy php_pdo_sqlsrv.dll to C:\webserver\php\ext\
 )
 
 echo.
@@ -109,20 +109,20 @@ echo =====================================
 echo.
 
 REM Backup php.ini
-if exist "C:\php\php.ini" (
-    copy "C:\php\php.ini" "C:\php\php.ini.backup.%date:~-4,4%%date:~-10,2%%date:~-7,2%" >nul
+if exist "C:\webserver\php\php.ini" (
+    copy "C:\webserver\php\php.ini" "C:\webserver\php\php.ini.backup.%date:~-4,4%%date:~-10,2%%date:~-7,2%" >nul
     echo ✅ Backed up php.ini
 )
 
 REM Remove existing SQLSRV entries
 powershell -Command "& {
-    $content = Get-Content 'C:\php\php.ini' | Where-Object { $_ -notmatch 'php_sqlsrv.dll' -and $_ -notmatch 'php_pdo_sqlsrv.dll' }
-    $content | Set-Content 'C:\php\php.ini'
+    $content = Get-Content 'C:\webserver\php\php.ini' | Where-Object { $_ -notmatch 'php_sqlsrv.dll' -and $_ -notmatch 'php_pdo_sqlsrv.dll' }
+    $content | Set-Content 'C:\webserver\php\php.ini'
 }"
 
 REM Add extensions in proper location (after other extensions)
 powershell -Command "& {
-    $content = Get-Content 'C:\php\php.ini'
+    $content = Get-Content 'C:\webserver\php\php.ini'
     $newContent = @()
     $extensionSectionFound = $false
     
@@ -145,7 +145,7 @@ powershell -Command "& {
         $newContent += 'extension=php_pdo_sqlsrv.dll'
     }
     
-    $newContent | Set-Content 'C:\php\php.ini'
+    $newContent | Set-Content 'C:\webserver\php\php.ini'
 }"
 
 echo ✅ Updated php.ini configuration
@@ -156,7 +156,7 @@ echo =====================================
 echo.
 
 echo Testing PHP syntax...
-C:\php\php.exe -t
+C:\webserver\php\php.exe -t
 if %ERRORLEVEL% neq 0 (
     echo ❌ PHP configuration has errors
     pause >nul
@@ -182,19 +182,19 @@ echo =====================================
 echo.
 
 echo Checking loaded extensions...
-C:\php\php.exe -m | findstr -i sqlsrv
+C:\webserver\php\php.exe -m | findstr -i sqlsrv
 if %ERRORLEVEL% equ 0 (
     echo ✅ SUCCESS: SQLSRV extensions loaded!
     echo.
     echo Testing database connection...
-    C:\php\php.exe -r "echo 'Available drivers: '; print_r(PDO::getAvailableDrivers());"
+    C:\webserver\php\php.exe -r "echo 'Available drivers: '; print_r(PDO::getAvailableDrivers());"
 ) else (
     echo ❌ SQLSRV extensions still not loaded
     echo.
     echo Troubleshooting steps:
     echo 1. Check if Visual C++ Redistributable 2019 is installed
     echo 2. Check if ODBC Driver 18 is installed  
-    echo 3. Verify extension files exist in C:\php\ext\
+    echo 3. Verify extension files exist in C:\webserver\php\ext\
     echo 4. Check Windows Event Viewer for errors
 )
 
