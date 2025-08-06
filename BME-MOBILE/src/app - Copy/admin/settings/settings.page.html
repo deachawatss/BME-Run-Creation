@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button size="large" outline="fill" color="danger" (click)="btnBack()"><ion-icon name="backspace-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>
+      NWFTH SETTINGS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>API SETTINGS</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+      <ion-item>
+        <ion-select label="API SERVER" placeholder="API SERVER" [(ngModel)]="this.server">
+          <ion-select-option value="TEST">TEST SERVER</ion-select-option>
+          <ion-select-option value="PRODUCTION">PRODUCTION SERVER</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button class="success" (click)="saveServer()">
+        <ion-icon name="save" slot="icon-only" ></ion-icon>&nbsp;SAVE
+      </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>NWF Beta v1.4</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDB50260-CF3D-4226-8EDC-8CC4CDBD8DA2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>NWFTH.My.MyApplication</StartupObject>
+    <RootNamespace>NWFTH</RootNamespace>
+    <AssemblyName>NWFTH</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\aposadas\Documents\Development\Mobile\NWFTH VB\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>50</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>NWFTH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>NWFTH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>NWFTH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>NWFTH.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>NWFTH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>NWFTH.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A51DEB982B59C54D647DC4FDB7FE27FC4F516DB5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Csv, Version=1.0.31.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Csv.1.0.31\lib\net40\Csv.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentFTP, Version=19.2.2.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentFTP.19.2.2\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Barcode">
+      <HintPath>..\..\..\..\Downloads\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.DotNet.PlatformAbstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.DotNet.PlatformAbstractions.2.1.0\lib\net45\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyModel.2.1.0\lib\net451\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.33\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Core, Version=2.15.2634.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zebra.Printer.SDK.2.15.2634\lib\net471\SdkApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Desktop, Version=2.15.2634.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zebra.Printer.SDK.2.15.2634\lib\net471\SdkApi.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Desktop.Usb, Version=2.15.2634.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zebra.Printer.SDK.2.15.2634\lib\net471\SdkApi.Desktop.Usb.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSnmpLib, Version=12.5.2.0, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lextm.SharpSnmpLib.12.5.2\lib\net471\SharpSnmpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp, Version=1.60.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.1.60.0\lib\net45\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Specialized.4.3.0\lib\net46\System.Collections.Specialized.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Odbc, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Odbc.8.0.0\lib\net462\System.Data.Odbc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.7.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.NameResolution.4.3.0\lib\net46\System.Net.NameResolution.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.4.4.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZebraPrinterSdk, Version=2.15.2634.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zebra.Printer.SDK.2.15.2634\lib\net471\ZebraPrinterSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmComTest.Designer.vb">
+      <DependentUpon>FrmComTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.vb">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFetchWt.Designer.vb">
+      <DependentUpon>frmFetchWt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFetchWt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="archived\frmFetchWtBatchList.Designer.vb">
+      <DependentUpon>frmFetchWtBatchList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="archived\frmFetchWtBatchList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="archived\frmFetchWtItemList.Designer.vb">
+      <DependentUpon>frmFetchWtItemList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="archived\frmFetchWtItemList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="archived\frmFetchWtRunModal.Designer.vb">
+      <DependentUpon>frmFetchWtRunModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="archived\frmFetchWtRunModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInventory.Designer.vb">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLot.Designer.vb">
+      <DependentUpon>frmLot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainBeta.Designer.vb">
+      <DependentUpon>frmMainBeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainBeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="archived\frmPartialPick.Designer.vb">
+      <DependentUpon>frmPartialPick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="archived\frmPartialPick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPassword.Designer.vb">
+      <DependentUpon>frmPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreweigh.Designer.vb">
+      <DependentUpon>frmPreweigh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreweigh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreweighBatch.Designer.vb">
+      <DependentUpon>frmPreweighBatch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreweighBatch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreweighFetchWt.Designer.vb">
+      <DependentUpon>frmPreweighFetchWt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreweighFetchWt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPreweighRunList.Designer.vb">
+      <DependentUpon>frmPreweighRunList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPreweighRunList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmprintest.Designer.vb">
+      <DependentUpon>frmprintest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmprintest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintModal.Designer.vb">
+      <DependentUpon>frmPrintModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRunModal.Designer.vb">
+      <DependentUpon>frmRunModal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRunModal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrunrpt.Designer.vb">
+      <DependentUpon>frmrunrpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmrunrpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScanToPrint.Designer.vb">
+      <DependentUpon>frmScanToPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmScanToPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.vb">
+      <DependentUpon>frmTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile_Partial_Picklist_Daily.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mobile_Partial_Picklist_Daily.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\ApiClass.vb" />
+    <Compile Include="Module\ApiHttpClient.vb" />
+    <Compile Include="Module\BarcodePrinter.vb" />
+    <Compile Include="Module\EncryptionHelper.vb" />
+    <Compile Include="Module\GPrinter.vb" />
+    <Compile Include="Module\MyApp.vb" />
+    <Compile Include="Module\MsSQL.vb" />
+    <Compile Include="Module\MyFunctions.vb" />
+    <Compile Include="Module\MySQL.vb" />
+    <Compile Include="Module\RegistryCRUD.vb" />
+    <Compile Include="Module\Resizer.vb" />
+    <Compile Include="Module\RGBColors.vb" />
+    <Compile Include="Module\SerialPortReceiver.vb" />
+    <Compile Include="Module\UserInfo.vb" />
+    <Compile Include="Module\XmlCRUD.vb" />
+    <Compile Include="Module\ZPLConnection.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="report\preweigh_wt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>preweigh_wt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="report\rptProd.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="report\runhdrrpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>runhdrrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="report\runreport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>runreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="report\test.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RptPreweighfrm.Designer.vb">
+      <DependentUpon>RptPreweighfrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RptPreweighfrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RptRunFrm.Designer.vb">
+      <DependentUpon>RptRunFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RptRunFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerialHelper.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmComTest.resx">
+      <DependentUpon>FrmComTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFetchWt.resx">
+      <DependentUpon>frmFetchWt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="archived\frmFetchWtBatchList.resx">
+      <DependentUpon>frmFetchWtBatchList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="archived\frmFetchWtItemList.resx">
+      <DependentUpon>frmFetchWtItemList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="archived\frmFetchWtRunModal.resx">
+      <DependentUpon>frmFetchWtRunModal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInventory.resx">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLot.resx">
+      <DependentUpon>frmLot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainBeta.resx">
+      <DependentUpon>frmMainBeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="archived\frmPartialPick.resx">
+      <DependentUpon>frmPartialPick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPassword.resx">
+      <DependentUpon>frmPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreweigh.resx">
+      <DependentUpon>frmPreweigh.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreweighBatch.resx">
+      <DependentUpon>frmPreweighBatch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreweighFetchWt.resx">
+      <DependentUpon>frmPreweighFetchWt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPreweighRunList.resx">
+      <DependentUpon>frmPreweighRunList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmprintest.resx">
+      <DependentUpon>frmprintest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintModal.resx">
+      <DependentUpon>frmPrintModal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRunModal.resx">
+      <DependentUpon>frmRunModal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrunrpt.resx">
+      <DependentUpon>frmrunrpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScanToPrint.resx">
+      <DependentUpon>frmScanToPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile_Partial_Picklist_Daily.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Mobile_Partial_Picklist_Daily.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <AdditionalFiles Include="report\preweigh_wt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>preweigh_wt.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="report\rptProd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProd.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <AdditionalFiles Include="report\runhdrrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>runhdrrpt.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <EmbeddedResource Include="report\test.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>test.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPicked.rdlc" />
+    <AdditionalFiles Include="report\runreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>runreport.vb</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <EmbeddedResource Include="RptPreweighfrm.resx">
+      <DependentUpon>RptPreweighfrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptRunFrm.resx">
+      <DependentUpon>RptRunFrm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="error.log">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="NWFTH_1_TemporaryKey.pfx" />
+    <None Include="NWFTH_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-weigh-scale-29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-scale-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-app-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-scale-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-31.png" />
+    <None Include="Resources\icons8-print-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon %281%29.ico" />
+    <Content Include="icon.ico" />
+    <Content Include="NWFTHDATA.xml" />
+    <Content Include="report\datacapture.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="report\preweigh_wt.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="report\RunReport.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\icons8-inventory-69.png" />
+    <None Include="Resources\icons8-about-69.png" />
+    <None Include="Resources\icons8-config-69.png" />
+    <None Include="Resources\icons8-barcode-69.png" />
+    <None Include="Resources\icons8-weighing-69.png" />
+    <None Include="Resources\icons8-home-69.png" />
+    <None Include="Resources\icons8-log-out-69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets" Condition="Exists('..\packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.1.60.0\build\net45\SkiaSharp.targets'))" />
+  </Target>
+</Project>

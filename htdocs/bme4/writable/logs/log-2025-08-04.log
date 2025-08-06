@@ -1,0 +1,86 @@
+CRITICAL - 2025-08-04 19:21:01 --> Error: Call to undefined function App\Models\ldap_connect()
+[Method: GET, Route: testauth]
+in APPPATH/Models/AuthModel.php on line 112.
+ 1 APPPATH/Models/AuthModel.php(70): App\Models\AuthModel->authenticateLDAP()
+ 2 APPPATH/Controllers/TestAuth.php(17): App\Models\AuthModel->authenticateUser()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestAuth->index()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/deachawat/dev/projects/BPP/webserver/htdocs/bme4/public/index.php')
+CRITICAL - 2025-08-04 19:21:06 --> Error: Call to undefined function App\Models\ldap_connect()
+[Method: GET, Route: testauth]
+in APPPATH/Models/AuthModel.php on line 112.
+ 1 APPPATH/Models/AuthModel.php(70): App\Models\AuthModel->authenticateLDAP()
+ 2 APPPATH/Controllers/TestAuth.php(17): App\Models\AuthModel->authenticateUser()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TestAuth->index()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/deachawat/dev/projects/BPP/webserver/htdocs/bme4/public/index.php')
+ERROR - 2025-08-04 19:21:24 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'last_login'.
+ERROR - 2025-08-04 19:21:24 --> Database authentication error: [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'last_login'.
+ERROR - 2025-08-04 19:21:39 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'last_login'.
+ERROR - 2025-08-04 19:21:39 --> Database authentication error: [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid column name 'last_login'.
+CRITICAL - 2025-08-04 19:51:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/template/header.php"
+[Method: GET, Route: createrunbulk]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/View/View.php(475): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/CreateRunBulk/index.php(1): CodeIgniter\View\View->include()
+ 4 SYSTEMPATH/View/View.php(226): include('/home/deachawat/dev/projects/BPP/webserver/htdocs/bme4/app/Views/CreateRunBulk/index.php')
+ 5 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1167): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/CreateRunBulk.php(47): view()
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\CreateRunBulk->index()
+ 9 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/deachawat/dev/projects/BPP/webserver/htdocs/bme4/public/index.php')
+ERROR - 2025-08-04 20:01:35 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'TFCPILOT3.dbo.BatchTicket'.
+ERROR - 2025-08-04 20:01:35 --> CreateRunBulk getBatchListPaginated error: [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'TFCPILOT3.dbo.BatchTicket'.
+ERROR - 2025-08-04 20:05:19 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:05:19 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:05:19 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:05:59 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:05:59 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:05:59 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:06:37 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:06:37 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:06:37 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:06:50 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:07:06 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert the value NULL into column 'RunNo', table 'TFCMOBILE.dbo.Cust_BulkRun'; column does not allow nulls. INSERT fails.
+ERROR - 2025-08-04 20:07:24 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot insert explicit value for identity column in table 'Cust_BulkRun' when IDENTITY_INSERT is set to OFF.
+ERROR - 2025-08-04 20:23:48 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The column 'BatchNo' was specified multiple times for 'CI_count_all_results'.
+ERROR - 2025-08-04 20:23:48 --> CreateRunBulk getBatchListPaginated error: [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The column 'BatchNo' was specified multiple times for 'CI_count_all_results'.
+ERROR - 2025-08-04 20:24:27 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The column 'BatchNo' was specified multiple times for 'CI_count_all_results'.
+ERROR - 2025-08-04 20:24:27 --> CreateRunBulk getBatchListPaginated error: [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]The column 'BatchNo' was specified multiple times for 'CI_count_all_results'.
+DEBUG - 2025-08-04 20:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:38:13 --> Attempting authentication for user: admin
+DEBUG - 2025-08-04 20:38:13 --> Starting authentication for user: admin
+DEBUG - 2025-08-04 20:38:13 --> Using database authentication (LDAP not available or disabled)
+DEBUG - 2025-08-04 20:38:13 --> Attempting authentication for user: admin
+DEBUG - 2025-08-04 20:38:14 --> User query result: "User found"
+DEBUG - 2025-08-04 20:38:14 --> Password verified with bcrypt
+DEBUG - 2025-08-04 20:38:14 --> Authentication successful
+DEBUG - 2025-08-04 20:38:14 --> Skipping last_login update (column does not exist)
+DEBUG - 2025-08-04 20:38:14 --> Returning success result: {"success":true,"user_id":1,"username":"admin","full_name":"Admin Admin","first_name":"Admin","last_name":"Admin","email":"admin@nwfth.com","department":"Production","user_level":1}
+DEBUG - 2025-08-04 20:38:14 --> Authentication result: {"success":true,"user_id":1,"username":"admin","full_name":"Admin Admin","first_name":"Admin","last_name":"Admin","email":"admin@nwfth.com","department":"Production","user_level":1}
+DEBUG - 2025-08-04 20:38:14 --> Authentication successful, setting session
+DEBUG - 2025-08-04 20:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:38:14 --> Session set. Logged_in status: true
+INFO - 2025-08-04 20:38:14 --> User admin logged in successfully from IP: 127.0.0.1
+DEBUG - 2025-08-04 20:38:14 --> Redirecting to: http://localhost:8080/
+DEBUG - 2025-08-04 20:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-04 20:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

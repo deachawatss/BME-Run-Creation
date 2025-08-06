@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>RUN LIST</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list >
+    <ion-item *ngFor="let p of mydata; let i = index" (click)="btnSelect(i)">
+      <ion-label>
+        <h2><b>Run No:</b>{{p.runno}} <b>Formula ID:</b>{{p.formulaid}}</h2>
+        <p><b>Batch Size:</b>{{p.batchsize}} <b>Batch:</b>{{p.tbatch}} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

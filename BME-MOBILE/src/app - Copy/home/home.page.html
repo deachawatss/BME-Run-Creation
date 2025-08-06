@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      NWFTH MOBILE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-button *ngFor="let p of this.menu2; let i = index" (click)="btnGo(i)" type="submit" color="success" expand="full" shape="round"  size="large">
+    <ion-icon class="{{p.icon}}"></ion-icon>&nbsp;{{p.title}}
+  </ion-button>
+
+<!--
+  <ion-button type="submit" color="success" expand="full" shape="round"  size="large" (click)="btnPutaway()">
+    <ion-icon name="cube-outline"></ion-icon>&nbsp;PUTAWAY / BIN TRANSFER
+  </ion-button>
+
+  <ion-button type="submit" color="success" expand="full" shape="round"  size="large" (click)="btnItemSearch()">
+    <ion-icon name="search-circle-outline"></ion-icon>&nbsp;ITEM / BIN SEARCH
+  </ion-button>
+
+  <ion-button type="submit" color="success" expand="full" shape="round"  size="large" (click)="btnSales()">
+    <ion-icon name="file-tray-stacked-outline"></ion-icon>&nbsp;SALES
+  </ion-button> 
+-->
+  <ion-button type="submit" color="danger" expand="full"  shape="round"  size="large" (click)="btnLogout()">
+    <ion-icon name="log-out-outline"></ion-icon>&nbsp;Logout
+  </ion-button>
+
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>NWF v1.3 {{this.server}}</ion-title>
+  </ion-toolbar>
+</ion-footer>

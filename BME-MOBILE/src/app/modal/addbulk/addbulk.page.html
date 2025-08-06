@@ -1,0 +1,92 @@
+<ion-header class="no-print">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button size="large" outline="fill" color="danger" (click)="cancel()"><ion-icon name="backspace-outline"></ion-icon>Back</ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Add Bulk
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-print">
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    <ion-row>
+      <ion-col> 
+        <ion-item>
+          <ion-input Placeholder="RM Item Barcode" [(ngModel)]="this.mybarcode"  style="background-color:cornsilk;" (keypress)="isItemEnter($event.keyCode)"></ion-input> 
+          <ion-button slot="end">
+            <ion-icon name="search" slot="icon-only" ></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Item Description:</ion-col>
+      <ion-col>{{this.idesc}}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Batch No:</ion-col>
+      <ion-col>{{this.batchno}}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>{{this.packunit}} Needed:</ion-col>
+      <ion-col>{{ this.bagsneed >= 0 ? (this.bagsneed | number:'1.1-2') : "0" }} {{this.packunit}}</ion-col>
+
+      <ion-col>Remaining:</ion-col>
+      <ion-col>{{ this.remaining >= 0 ? (this.remaining | number:'1.1-6') : "0" }} Kgs</ion-col>
+
+    </ion-row>
+
+
+  </ion-grid>
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    <ion-row class="ion-text-center">
+      <ion-col size="2.5"></ion-col>
+      <ion-col size="5">Picked Lot</ion-col>
+      <ion-col size="2">Qty Picked</ion-col>
+      <ion-col size="2">Bulk Picked</ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let p of pickedData; let i = index" >
+      <ion-col size="2.5">
+        <ion-button type="submit" color="success"  shape="round"  size="small" (click)="printme(i)">
+          <ion-icon name="print"></ion-icon>
+        </ion-button>
+        <ion-button type="submit" color="danger"  shape="round"  size="small" (click)="deleteme(i)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="5">{{p.lotno}}</ion-col>
+      <ion-col size="2">{{p.qty | number:'1.1-6'}}</ion-col>
+      <ion-col size="2">{{ (p.qty / this.packsize) | number:'1.1-6'}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+<!--[hidden]='this.NoAllocate' -->
+  <ion-button expand="block" color="success" [hidden]='this.NoAllocate' shape="round" (click)="btnallocate()">ALLOCATE</ion-button> 
+</ion-content>
+
+<ion-content class="print-content" style="display:none">
+  <table>
+    <tr>
+      <td>ITEM KEY:</td>
+      <td>{{this.printdata.itemkey}}</td>
+      <td>BATCH NO:</td>
+      <td>{{this.printdata.batchno}}</td>
+    </tr>
+    <tr>
+      <td>LOT NO:</td>
+      <td>{{this.printdata.lotno}}</td>
+    </tr>
+    <tr>
+      <td>QUANTITY:</td>
+      <td>{{this.printdata.qty | number:'1.1-6'}}</td>
+    </tr>
+  </table>  
+</ion-content>

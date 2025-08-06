@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button size="large" outline="fill" color="danger" (click)="btnBack()"><ion-icon name="backspace-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>
+      NEW FG TRANSFER
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-grid>
+    
+    <ion-row>
+      <ion-col size="4"><ion-label>Batchticket</ion-label></ion-col>
+      <ion-col ><ion-input style="background-color:cornsilk;" #frmbatchticket [(ngModel)]="this.batchticket"  type="text" (keypress)="txtbatchticket($event.keyCode)"  [clearInput]="true"></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4"><ion-label>Item</ion-label></ion-col>
+      <ion-col><ion-input style="background-color:cornsilk;" #frmitem [(ngModel)]="this.item"  type="text" (keypress)="txtitem($event.keyCode)" [clearInput]="true"></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4"><ion-label>Bin No</ion-label></ion-col>
+      <ion-col><ion-input style="background-color:cornsilk;" #frmbin [(ngModel)]="this.BinNo" (keypress)="txtbin($event.keyCode)"  [clearInput]="true"></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4"><ion-label>Kgs per Bag</ion-label></ion-col>
+      <ion-col><ion-input style="background-color:cornsilk;" #frmkgs [(ngModel)]="this.kgsperbag" (keypress)="txtkgs($event.keyCode)"  [clearInput]="true"></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" #btntrans color="success" expand="full" size="large" shape="round" (click)="btnTransfer()">
+          <ion-icon name="checkmark-done-outline"></ion-icon>&nbsp;TRANSFER
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+
+</ion-content>

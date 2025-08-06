@@ -1,0 +1,8 @@
+{
+  "name": "BME-MOBILE",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

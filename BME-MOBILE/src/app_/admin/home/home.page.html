@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      NWFTH MOBILE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6"  size-sm="3">
+
+        <ion-button *ngFor="let p of this.menu2; let i = index" (click)="btnGo(i)" type="submit" color="success" expand="full" shape="round"  size="large">
+          <ion-icon class="{{p.icon}}"></ion-icon>&nbsp;{{p.title}}
+        </ion-button>
+        
+        <ion-card color="success ion-activatable ripple-parent ">
+        
+          <ion-card-content class="ion-text-center" (click)='goto("admin/settings")'>  
+            <ion-icon class="fas fa-tools " ></ion-icon>&nbsp;
+            <h2 class="myhead">SETTINGS</h2>
+          </ion-card-content>
+          
+        </ion-card>
+
+      </ion-col>
+      
+      <ion-col size="6" size-sm="3">
+        <ion-card color="success">
+        
+          <ion-card-content class="ion-text-center">  
+            <ion-icon class="fas fa-tools " ></ion-icon>&nbsp;
+            <h2 class="myhead">SETTINGS</h2>
+          </ion-card-content>
+          
+        </ion-card>
+      </ion-col>
+      
+      <ion-col size="6"  size-sm="3">
+        
+        <ion-card color="success">
+        
+          <ion-card-content class="ion-text-center">  
+            <ion-icon class="fas fa-tools " ></ion-icon>&nbsp;
+            <h2 class="myhead">SETTINGS</h2>
+          </ion-card-content>
+          
+        </ion-card>
+
+      </ion-col>
+
+      <ion-col size="6" size-sm="3">
+        <ion-card color="success">
+        
+          <ion-card-content class="ion-text-center">  
+            <ion-icon class="fas fa-tools " ></ion-icon>&nbsp;
+            <h2 class="myhead">SETTINGS</h2>
+          </ion-card-content>
+          
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>NWF Beta v1.4</ion-title>
+  </ion-toolbar>
+</ion-footer>

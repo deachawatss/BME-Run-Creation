@@ -1,0 +1,374 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button size="large" outline="fill" color="danger" (click)="btnBack()"><ion-icon name="backspace-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      BULK PICK
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2"><ion-label>Run No.:</ion-label></ion-col>
+      <ion-col size="2">
+            <ion-input [(ngModel)]="this.runno" (keypress)="specificrunsearch($event.keyCode)" style="background-color:cornsilk;font-size:12px;float:left"></ion-input>
+      </ion-col>
+      <ion-col size="1" (click)="runsearch()">
+        <ion-button size="small">
+          <ion-icon name="search" slot="icon-only" ></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="1.5"><ion-label>Formula:</ion-label></ion-col>
+      <ion-col size="3"><ion-input [(ngModel)]="this.formula" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2"><ion-label>Total Batches:</ion-label></ion-col>
+      <ion-col size="2"><ion-input [(ngModel)]="this.total_batch" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+      <ion-col size="1"></ion-col>
+      <ion-col size="1.5"><ion-label>Total Weight:</ion-label></ion-col>
+      <ion-col size="3"><ion-input [(ngModel)]="this.total_weight" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2"><ion-label>RM Item Key:</ion-label></ion-col>
+      <ion-col size="2"><ion-input [(ngModel)]="this.rm_itemkey" (keypress)="specificgetrundetails($event.keyCode)" style="background-color:cornsilk;font-size:12px;"></ion-input></ion-col>
+      <ion-col size="1">
+        <ion-button size="small" (click)="getrundetails(this.runno)">
+          <ion-icon name="search" slot="icon-only" ></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="1.5"><ion-label>Description:</ion-label></ion-col>
+      <ion-col  size="3"><ion-input [(ngModel)]="this.description" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2"><ion-label>Suggested Lot No:</ion-label></ion-col>
+      <ion-col size="2"><ion-input [(ngModel)]="this.suggested_lot_no" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+      <ion-col size="1"></ion-col>
+      <ion-col size="1.5"><ion-label>Bin No:</ion-label></ion-col>
+      <ion-col size="3"><ion-input [(ngModel)]="this.binno" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2"><ion-label>Bulk Pack Size:</ion-label></ion-col>
+      <ion-col size="3.75"><ion-input [(ngModel)]="this.bulk_packsize1" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+      <ion-col size="3.75"><ion-input [(ngModel)]="this.bulk_packsize2" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2"><ion-label>Total Needed:</ion-label></ion-col>
+      <ion-col size="2.5"><ion-input [(ngModel)]="this.total_needed1" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+      <ion-col size="2.5"><ion-input [(ngModel)]="this.total_needed2" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+      <ion-col size="2.5"><ion-input [(ngModel)]="this.total_needed3" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+    </ion-row>
+
+    <!--
+    <ion-row>
+      <ion-col size="2"><ion-label>Remaining to Pick:</ion-label></ion-col>
+      <ion-col size="2.5"><ion-input [(ngModel)]="this.remaining_topick1" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+      <ion-col size="2.5"><ion-input [(ngModel)]="this.remaining_topick2" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+      <ion-col size="2.5"><ion-input [(ngModel)]="this.remaining_topick3" style="background-color:cornsilk;font-size:12px;" readonly></ion-input></ion-col>
+    </ion-row>
+    -->
+  </ion-grid>
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    
+    <ion-row class="ion-nowrap ion-text-center" color="success">
+      <ion-col size="2.7">Batch Number</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[0]?.batchno)">{{ this?.batchlist[0]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[1]?.batchno)">{{ this?.batchlist[1]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[2]?.batchno)">{{ this?.batchlist[2]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[3]?.batchno)">{{ this?.batchlist[3]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[4]?.batchno)">{{ this?.batchlist[4]?.batchno }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Picked</ion-col>
+      <ion-col size="2">{{ this?.batchlist[0]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[1]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[2]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[3]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[4]?.nopackpick | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap">
+      <ion-col size="2.7">Quantity Picked (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[0]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[1]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[2]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[3]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[4]?.qtypicked | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Remaining</ion-col>
+      <ion-col size="2">{{ this?.batchlist[0]?.noofpacksrem ? (this?.batchlist[0]?.noofpacksrem >= 0 ? (this?.batchlist[0]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[0]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[1]?.noofpacksrem ? (this?.batchlist[1]?.noofpacksrem >= 0 ? (this?.batchlist[1]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[1]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[2]?.noofpacksrem ? (this?.batchlist[2]?.noofpacksrem >= 0 ? (this?.batchlist[2]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[2]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[3]?.noofpacksrem ? (this?.batchlist[3]?.noofpacksrem >= 0 ? (this?.batchlist[3]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[3]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[4]?.noofpacksrem ? (this?.batchlist[4]?.noofpacksrem >= 0 ? (this?.batchlist[4]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[4]?.noofpacksrem  }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">Quantity Remaining (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[0]?.qtyrem ? (this?.batchlist[0]?.qtyrem >= 0 ? (this?.batchlist[0]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[0]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[1]?.qtyrem ? (this?.batchlist[1]?.qtyrem >= 0 ? (this?.batchlist[1]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[1]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[2]?.qtyrem ? (this?.batchlist[2]?.qtyrem >= 0 ? (this?.batchlist[2]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[2]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[3]?.qtyrem ? (this?.batchlist[3]?.qtyrem >= 0 ? (this?.batchlist[3]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[3]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[4]?.qtyrem ? (this?.batchlist[4]?.qtyrem >= 0 ? (this?.batchlist[4]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[4]?.qtyrem}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    
+    <ion-row class="ion-nowrap ion-text-center" color="success">
+      <ion-col size="2.7">Batch Number</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[5]?.batchno)">{{ this?.batchlist[5]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[6]?.batchno)">{{ this?.batchlist[6]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[7]?.batchno)">{{ this?.batchlist[7]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[8]?.batchno)">{{ this?.batchlist[8]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[9]?.batchno)">{{ this?.batchlist[9]?.batchno }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Picked</ion-col>
+      <ion-col size="2">{{ this?.batchlist[5]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[6]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[7]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[8]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[9]?.nopackpick | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap">
+      <ion-col size="2.7">Quantity Picked (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[5]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[6]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[7]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[8]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[9]?.qtypicked | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Remaining</ion-col>
+      <ion-col size="2">{{ this?.batchlist[5]?.noofpacksrem ? (this?.batchlist[5]?.noofpacksrem >= 0 ? (this?.batchlist[5]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[5]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[6]?.noofpacksrem ? (this?.batchlist[6]?.noofpacksrem >= 0 ? (this?.batchlist[6]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[6]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[7]?.noofpacksrem ? (this?.batchlist[7]?.noofpacksrem >= 0 ? (this?.batchlist[7]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[7]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[8]?.noofpacksrem ? (this?.batchlist[8]?.noofpacksrem >= 0 ? (this?.batchlist[8]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[8]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[9]?.noofpacksrem ? (this?.batchlist[9]?.noofpacksrem >= 0 ? (this?.batchlist[9]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[9]?.noofpacksrem  }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">Quantity Remaining (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[5]?.qtyrem ? (this?.batchlist[5]?.qtyrem >= 0 ? (this?.batchlist[5]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[5]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[6]?.qtyrem ? (this?.batchlist[6]?.qtyrem >= 0 ? (this?.batchlist[6]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[6]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[7]?.qtyrem ? (this?.batchlist[7]?.qtyrem >= 0 ? (this?.batchlist[7]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[7]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[8]?.qtyrem ? (this?.batchlist[8]?.qtyrem >= 0 ? (this?.batchlist[8]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[8]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[9]?.qtyrem ? (this?.batchlist[9]?.qtyrem >= 0 ? (this?.batchlist[9]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[9]?.qtyrem}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    
+    <ion-row class="ion-nowrap ion-text-center" color="success">
+      <ion-col size="2.7">Batch Number</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[10]?.batchno)">{{ this?.batchlist[10]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[11]?.batchno)">{{ this?.batchlist[11]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[12]?.batchno)">{{ this?.batchlist[12]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[13]?.batchno)">{{ this?.batchlist[13]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[14]?.batchno)">{{ this?.batchlist[14]?.batchno }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Picked</ion-col>
+      <ion-col size="2">{{ this?.batchlist[10]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[11]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[12]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[13]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[14]?.nopackpick | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap">
+      <ion-col size="2.7">Quantity Picked (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[10]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[11]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[12]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[13]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[14]?.qtypicked | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Remaining</ion-col>
+      <ion-col size="2">{{ this?.batchlist[10]?.noofpacksrem ? (this?.batchlist[10]?.noofpacksrem >= 0 ? (this?.batchlist[10]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[10]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[11]?.noofpacksrem ? (this?.batchlist[11]?.noofpacksrem >= 0 ? (this?.batchlist[11]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[11]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[12]?.noofpacksrem ? (this?.batchlist[12]?.noofpacksrem >= 0 ? (this?.batchlist[12]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[12]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[13]?.noofpacksrem ? (this?.batchlist[13]?.noofpacksrem >= 0 ? (this?.batchlist[13]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[13]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[14]?.noofpacksrem ? (this?.batchlist[14]?.noofpacksrem >= 0 ? (this?.batchlist[14]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[14]?.noofpacksrem  }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">Quantity Remaining (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[10]?.qtyrem ? (this?.batchlist[10]?.qtyrem >= 0 ? (this?.batchlist[10]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[10]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[11]?.qtyrem ? (this?.batchlist[11]?.qtyrem >= 0 ? (this?.batchlist[11]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[11]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[12]?.qtyrem ? (this?.batchlist[12]?.qtyrem >= 0 ? (this?.batchlist[12]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[12]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[13]?.qtyrem ? (this?.batchlist[13]?.qtyrem >= 0 ? (this?.batchlist[13]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[13]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[14]?.qtyrem ? (this?.batchlist[14]?.qtyrem >= 0 ? (this?.batchlist[14]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[14]?.qtyrem}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    
+    <ion-row class="ion-nowrap ion-text-center" color="success">
+      <ion-col size="2.7">Batch Number</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[15]?.batchno)">{{ this?.batchlist[15]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[16]?.batchno)">{{ this?.batchlist[16]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[17]?.batchno)">{{ this?.batchlist[17]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[18]?.batchno)">{{ this?.batchlist[18]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[19]?.batchno)">{{ this?.batchlist[19]?.batchno }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Picked</ion-col>
+      <ion-col size="2">{{ this?.batchlist[15]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[16]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[17]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[18]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[19]?.nopackpick | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap">
+      <ion-col size="2.7">Quantity Picked (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[15]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[16]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[17]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[18]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[19]?.qtypicked | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Remaining</ion-col>
+      <ion-col size="2">{{ this?.batchlist[15]?.noofpacksrem ? (this?.batchlist[15]?.noofpacksrem >= 0 ? (this?.batchlist[15]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[15]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[16]?.noofpacksrem ? (this?.batchlist[16]?.noofpacksrem >= 0 ? (this?.batchlist[16]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[16]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[17]?.noofpacksrem ? (this?.batchlist[17]?.noofpacksrem >= 0 ? (this?.batchlist[17]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[17]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[18]?.noofpacksrem ? (this?.batchlist[18]?.noofpacksrem >= 0 ? (this?.batchlist[18]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[18]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[19]?.noofpacksrem ? (this?.batchlist[19]?.noofpacksrem >= 0 ? (this?.batchlist[19]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[19]?.noofpacksrem  }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">Quantity Remaining (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[15]?.qtyrem ? (this?.batchlist[15]?.qtyrem >= 0 ? (this?.batchlist[15]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[15]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[16]?.qtyrem ? (this?.batchlist[16]?.qtyrem >= 0 ? (this?.batchlist[16]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[16]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[17]?.qtyrem ? (this?.batchlist[17]?.qtyrem >= 0 ? (this?.batchlist[17]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[17]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[18]?.qtyrem ? (this?.batchlist[18]?.qtyrem >= 0 ? (this?.batchlist[18]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[18]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[19]?.qtyrem ? (this?.batchlist[19]?.qtyrem >= 0 ? (this?.batchlist[19]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[19]?.qtyrem}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    
+    <ion-row class="ion-nowrap ion-text-center" color="success">
+      <ion-col size="2.7">Batch Number</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[20]?.batchno)">{{ this?.batchlist[20]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[21]?.batchno)">{{ this?.batchlist[21]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[22]?.batchno)">{{ this?.batchlist[22]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[23]?.batchno)">{{ this?.batchlist[23]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[24]?.batchno)">{{ this?.batchlist[24]?.batchno }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Picked</ion-col>
+      <ion-col size="2">{{ this?.batchlist[20]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[21]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[22]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[23]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[24]?.nopackpick | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap">
+      <ion-col size="2.7">Quantity Picked (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[20]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[21]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[22]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[23]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[24]?.qtypicked | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Remaining</ion-col>
+      <ion-col size="2">{{ this?.batchlist[20]?.noofpacksrem ? (this?.batchlist[20]?.noofpacksrem >= 0 ? (this?.batchlist[20]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[20]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[21]?.noofpacksrem ? (this?.batchlist[21]?.noofpacksrem >= 0 ? (this?.batchlist[21]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[21]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[22]?.noofpacksrem ? (this?.batchlist[22]?.noofpacksrem >= 0 ? (this?.batchlist[22]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[22]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[23]?.noofpacksrem ? (this?.batchlist[23]?.noofpacksrem >= 0 ? (this?.batchlist[23]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[23]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[24]?.noofpacksrem ? (this?.batchlist[24]?.noofpacksrem >= 0 ? (this?.batchlist[24]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[24]?.noofpacksrem  }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">Quantity Remaining (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[20]?.qtyrem ? (this?.batchlist[20]?.qtyrem >= 0 ? (this?.batchlist[20]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[20]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[21]?.qtyrem ? (this?.batchlist[21]?.qtyrem >= 0 ? (this?.batchlist[21]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[21]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[22]?.qtyrem ? (this?.batchlist[22]?.qtyrem >= 0 ? (this?.batchlist[22]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[22]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[23]?.qtyrem ? (this?.batchlist[23]?.qtyrem >= 0 ? (this?.batchlist[23]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[23]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[24]?.qtyrem ? (this?.batchlist[24]?.qtyrem >= 0 ? (this?.batchlist[24]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[24]?.qtyrem}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 95vw;">
+    
+    <ion-row class="ion-nowrap ion-text-center" color="success">
+      <ion-col size="2.7">Batch Number</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[25]?.batchno)">{{ this?.batchlist[25]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[26]?.batchno)">{{ this?.batchlist[26]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[27]?.batchno)">{{ this?.batchlist[27]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[28]?.batchno)">{{ this?.batchlist[28]?.batchno }}</ion-col>
+      <ion-col size="2" (click)="addBulk(this?.batchlist[29]?.batchno)">{{ this?.batchlist[29]?.batchno }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Picked</ion-col>
+      <ion-col size="2">{{ this?.batchlist[25]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[26]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[27]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[28]?.nopackpick | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[29]?.nopackpick | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap">
+      <ion-col size="2.7">Quantity Picked (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[25]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[26]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[27]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[28]?.qtypicked | number:'1.1-4' }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[29]?.qtypicked | number:'1.1-4' }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">No. of Packs Remaining</ion-col>
+      <ion-col size="2">{{ this?.batchlist[25]?.noofpacksrem ? (this?.batchlist[25]?.noofpacksrem >= 0 ? (this?.batchlist[25]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[25]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[26]?.noofpacksrem ? (this?.batchlist[26]?.noofpacksrem >= 0 ? (this?.batchlist[26]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[26]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[27]?.noofpacksrem ? (this?.batchlist[27]?.noofpacksrem >= 0 ? (this?.batchlist[27]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[27]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[28]?.noofpacksrem ? (this?.batchlist[28]?.noofpacksrem >= 0 ? (this?.batchlist[28]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[28]?.noofpacksrem  }}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[29]?.noofpacksrem ? (this?.batchlist[29]?.noofpacksrem >= 0 ? (this?.batchlist[29]?.noofpacksrem | number:'1.1-4') : "0") : this?.batchlist[29]?.noofpacksrem  }}</ion-col>
+    </ion-row>
+
+    <ion-row class="ion-nowrap" >
+      <ion-col size="2.7">Quantity Remaining (KG)</ion-col>
+      <ion-col size="2">{{ this?.batchlist[25]?.qtyrem ? (this?.batchlist[25]?.qtyrem >= 0 ? (this?.batchlist[25]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[25]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[26]?.qtyrem ? (this?.batchlist[26]?.qtyrem >= 0 ? (this?.batchlist[26]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[26]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[27]?.qtyrem ? (this?.batchlist[27]?.qtyrem >= 0 ? (this?.batchlist[27]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[27]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[28]?.qtyrem ? (this?.batchlist[28]?.qtyrem >= 0 ? (this?.batchlist[28]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[28]?.qtyrem}}</ion-col>
+      <ion-col size="2">{{ this?.batchlist[29]?.qtyrem ? (this?.batchlist[29]?.qtyrem >= 0 ? (this?.batchlist[29]?.qtyrem | number:'1.1-4') : "0") : this?.batchlist[29]?.qtyrem}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+ 
+</ion-content>

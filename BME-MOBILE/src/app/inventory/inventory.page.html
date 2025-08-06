@@ -1,0 +1,40 @@
+<style>
+  .trdone{
+    background-color: darkseagreen;
+  }
+</style>
+<ion-content [fullscreen]="true">
+  
+  <ion-header>
+    <ion-toolbar class="ion-text-center">
+      <ion-title >INVENTORY</ion-title>
+      <ion-buttons slot="start">
+        <ion-button size="large" outline="fill" color="danger"  (click)="btnBack()"><ion-icon name="backspace-outline"></ion-icon>Back</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="6" size-sm="3" *ngFor="let p of this.menu2; let i = index" (click)="btnGo(i)">
+
+        <ion-card color="success">
+        
+          <ion-card-content class="ion-text-center">  
+            <ion-icon class="{{p.icon}}" ></ion-icon>&nbsp;
+            <h2 class="myhead">{{p.title}}</h2>
+          </ion-card-content>
+          
+        </ion-card>
+
+      </ion-col>
+  
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>

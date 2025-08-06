@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button size="large" outline="fill" color="danger" (click)="btnBack()"><ion-icon name="backspace-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>
+      PUTAWAY / BIN TRANSFER
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+      
+      <!-- <ion-item>
+        <ion-label><b>Barcode</b></ion-label>
+        <ion-input style="background-color:cornsilk;" #Field1 [(ngModel)]="this.ProdCode" placeholder="Barcode" (ionFocus)="itemclearInput()" (keypress)="isItemEnter($event.keyCode)" clearOnEdit="true" class="txtinput"></ion-input>
+        <ion-button (click)="btnLotSearch()">
+          <ion-icon name="search" slot="icon-only" ></ion-icon>
+        </ion-button>
+      </ion-item> -->
+
+      <ion-item>
+        <ion-label><b>Lot No</b></ion-label>
+        <ion-input style="background-color:cornsilk;"  [(ngModel)]="this.LotNo" placeholder="Lot No" (ionFocus)="itemclearInput()" (keypress)="isItemEnter($event.keyCode)" clearOnEdit="true" class="txtinput"></ion-input>
+        <ion-button (click)="btnLotSearch()">
+          <ion-icon name="search" slot="icon-only" ></ion-icon>
+        </ion-button>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label><b>Item Key</b></ion-label>
+        <ion-input [(ngModel)]="this.ItemKey" [readonly]="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><b>Bin No</b></ion-label>
+        <ion-input [(ngModel)]="this.BinNo"  [readonly]="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><b>Location</b></ion-label>
+        <ion-input [(ngModel)]="this.Location" [readonly]="true"></ion-input>
+
+        <ion-label><b>UOM</b></ion-label>
+        <ion-input [(ngModel)]="this.UOM" [readonly]="true"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label><b>Exp. Date</b></ion-label>
+        <ion-input [(ngModel)]="this.ExpDate" [readonly]="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><b>QtyOnHand</b></ion-label>
+        <ion-input [(ngModel)]="this.QtyOnHand"  [readonly]="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><b>Qty Available</b></ion-label>
+        <ion-input [(ngModel)]="this.QtyAvailable" [readonly]="true"></ion-input>
+      </ion-item>
+      
+
+      <ion-item>
+        <ion-label><b>Transfer Qty</b></ion-label>
+        <ion-input style="background-color:cornsilk;" #Field2 [(ngModel)]="this.PutawayQty" placeholder="0" inputmode="decimal"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><b>To Bin #</b></ion-label>
+        <ion-input style="background-color:cornsilk;" #Field3 [(ngModel)]="this.NewBinNo" placeholder="New Bin No" ></ion-input>
+        <ion-button (click)="btnBinSearch()">
+          <ion-icon name="search" slot="icon-only" ></ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label><b>Doc No</b></ion-label>
+        <ion-input style="background-color:cornsilk;" #Field2 [(ngModel)]="this.docno" placeholder="0" ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button type="submit" color="success" fill="outline" expand="full" shape="round" size="large" (click)="btnTransfer()">
+      <ion-icon name="send-outline"></ion-icon>&nbsp;Transfer
+    </ion-button>
+
+    <ion-button type="submit" color="danger" expand="full" fill="outline" shape="round"  size="large" (click)="btnBack()">
+      <ion-icon name="backspace-outline"></ion-icon>&nbsp;BACk
+    </ion-button>
+</ion-content>

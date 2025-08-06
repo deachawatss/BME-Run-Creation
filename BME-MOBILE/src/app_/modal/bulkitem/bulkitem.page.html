@@ -1,0 +1,33 @@
+
+<ion-content [fullscreen]="true">
+
+  <ion-segment value="segment" color="success">
+
+    <ion-segment-button value="segment" (click)="setInputType(1)">
+      <ion-label>BULK</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="default" (click)="setInputType(0)">
+      <ion-label>KG/s</ion-label>
+    </ion-segment-button>
+    
+  </ion-segment>
+
+  <ion-list [hidden]='this.isKgs'>
+    <ion-item>
+      <ion-label>KGs</ion-label>
+      <ion-input label="KGs" placeholder="0" [(ngModel)]="this.qty" ></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label>BULK</ion-label>
+      <ion-input label="BULK" placeholder="0" [(ngModel)]="this.bulkqty" required ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-text-center">
+    <ion-button  color="success"  shape="round"  size="large" (click)="mclose(1)">Confirm</ion-button>
+    <ion-button  color="warning"  shape="round"  size="large" (click)="mclose(0)">Cancel</ion-button>
+  </div>
+  
+</ion-content>

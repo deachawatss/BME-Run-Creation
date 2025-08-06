@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>BIN SUMMARY</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollX="true">
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="primary">
+        <ion-label>
+          BIN Information
+        </ion-label>
+      </ion-item-divider>
+    </ion-item-group>
+
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="7">Bin No</ion-col>
+          <ion-col>{{this.binname}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Bin Name</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>{{this.bindesc}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="7">Item Count</ion-col>
+          <ion-col>{{this.binItemCount}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item-group>
+      <ion-item-divider color="primary">
+        <ion-label>
+          Item/Bin Summary
+        </ion-label>
+      </ion-item-divider>
+    </ion-item-group>
+    <ion-item>
+
+      <ion-grid class="ion-margin" [fixed]="true" scrollX="true" style="width: 500px;">
+        <ion-row class="ion-nowrap" color="success">
+          <ion-col size="6">Item Key</ion-col>
+          <ion-col size="10">Lot</ion-col>
+          <ion-col size="5">Qty</ion-col>
+          <ion-col size="8">Qty Committed</ion-col>
+          <ion-col size="8">Qty Available</ion-col>
+          <ion-col size="5">Expiry</ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let p of bindata; let i = index" class="ion-nowrap">
+          <ion-col size="6">{{p.ItemKey}}</ion-col>
+          <ion-col size="10">{{p.LotNo}}</ion-col>
+          <ion-col size="5">{{p.QtyOnHand | number:'1.1-6' }}</ion-col>
+          <ion-col size="8">{{p.QtyCommitSales | number:'1.1-6' }}</ion-col>
+          <ion-col size="8">{{p.QtyOnHand - p.QtyCommitSales | number:'1.1-6' }}</ion-col>
+          <ion-col size="5">{{p.DateExpiry}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    
+    </ion-item>
+
+
+  </ion-list>
+
+  
+
+</ion-content>

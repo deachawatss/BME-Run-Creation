@@ -1,0 +1,46 @@
+
+.checkbox-grid li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.word-wrap {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.word-limit {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.bootbox.modal{
+  overflow: auto !important;
+}
+
+.checkbox-grid{
+  padding-left: 0px;
+}
+
+.error{
+  float:left;
+  color:red;
+  display: inline-block;
+  clear: both;
+
+}
+
+.trans-form > .modal-dialog{
+  width: 90%!important;
+  max-width:90% !important;
+  min-width:90% !important;
+}
+
+.bigClass .modal-dialog{
+  min-width: 90vw;
+}

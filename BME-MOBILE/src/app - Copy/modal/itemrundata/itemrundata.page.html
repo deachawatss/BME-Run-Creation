@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ITEM LIST</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list >
+    <ion-item *ngFor="let p of mydata; let i = index" (click)="btnSelect(i)">
+      <ion-label>
+        <h2><b>Item Key:</b>{{p.ItemKey}}</h2>
+        <p><b>Description:</b>{{p.Desc1}} <b>Packsize:</b>{{p.featurevalue}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

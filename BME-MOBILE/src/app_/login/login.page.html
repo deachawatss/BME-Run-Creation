@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <form style="width:90%;margin:5px auto;">
+
+    <ion-item class="item item-trns text-center" color="transparent" >
+      <ion-img src="assets/images/Logo.jpg" style="width: 350px;margin:0px auto;"></ion-img>
+    </ion-item>
+
+    <ion-item  fill="outline" style="margin-top:5px;">
+      <ion-label position="floating" style="margin-top:5px;">Username</ion-label>
+      <ion-input [(ngModel)]="this.uname" name="uname" type="text" required ></ion-input>
+    </ion-item>
+    <ion-item  fill="outline" style="margin-top:5px;">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input  [(ngModel)]="this.pword" name="pword" type="password" required></ion-input>
+    </ion-item>
+  </form>
+  <ion-button type="submit" color="success" expand="full" size="large" shape="round" (click)="btnlogin()">
+    <ion-icon name="key-outline"></ion-icon>&nbsp;Sign In
+  </ion-button>
+</ion-content>

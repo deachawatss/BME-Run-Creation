@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button size="large" outline="fill" color="danger" (click)="btnBack()"><ion-icon name="backspace-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      DISPATCH
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input style="background-color:cornsilk;" [(ngModel)]="this.search" placeholder="Search"  clearOnEdit="true"  class="txtinput"></ion-input>
+  <ion-grid>
+    
+    <ion-row [ngClass]='nClass(1)'>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+    </ion-row>
+
+    <ion-row [ngClass]='nClass(2)'>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+    </ion-row>
+
+    <ion-row [ngClass]='nClass(3)'>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+    </ion-row>
+
+    <ion-row [ngClass]='nClass(4)'>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

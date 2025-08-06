@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Login</title>
+</head>
+<body>
+    <h2>Manual Login Test</h2>
+    <form method="POST" action="http://localhost:8080/auth/authenticate">
+        <div>
+            <label>Username:</label>
+            <input type="text" name="username" value="admin" required>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password" value="admin" required>
+        </div>
+        <div>
+            <input type="hidden" name="csrf_token_name" value="331a1fdd548113958615d717fdfffa8e">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</body>
+</html>

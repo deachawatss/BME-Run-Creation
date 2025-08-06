@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ITEM LIST</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar (ionChange)="handleChange($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list >
+    <ion-item *ngFor="let p of results; let i = index" (click)="btnSelect(i)">
+      <ion-label>
+        <h2><b>ITEM KEY:</b>{{p.ItemKey}} <b>LotNo:</b>{{p.LotNo}}</h2>
+        <p><b>BIN:</b>{{p.BinNo}} <b>OnHand:</b>{{p.QtyOnHand}} <b>Expiry:</b>{{p.DateExpiry}} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

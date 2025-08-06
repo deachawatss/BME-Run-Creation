@@ -1,0 +1,1347 @@
+DEBUG - 2025-08-06 07:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:20:06 --> User action: home_index
+DEBUG - 2025-08-06 07:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:20:43 --> User action: home_index
+DEBUG - 2025-08-06 07:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:20:49 --> User action: index
+DEBUG - 2025-08-06 07:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:20:53 --> User action: ajaxlist
+INFO - 2025-08-06 07:20:53 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:20:54 --> User action: home_index
+DEBUG - 2025-08-06 07:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:20:55 --> User action: index
+DEBUG - 2025-08-06 07:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:20:59 --> User action: ajaxlist
+INFO - 2025-08-06 07:20:59 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial: Found FG item TB317-01 - Battermix for RunNo 214037
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial DEBUG - RunNo 214037 raw ingredients from TFCMOBILE: []
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial DEBUG - RunNo 214037 original PNITEM ingredients: [{"BatchNo":"850823","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSOYI01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSOYF01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"}]
+ERROR - 2025-08-06 07:24:16 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'INMAST'.
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial DEBUG - RunNo 214037 ingredients from simple SQL query: []
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial DEBUG - RunNo 214037 raw ingredients from TFCPILOT3: [{"ItemKey":"INSOYF01","LineId":2,"StandardQty":252.5,"PackSize":20,"ToPickedPartialQty":12.5},{"ItemKey":"INSOYI01","LineId":2,"StandardQty":252.5,"PackSize":20,"ToPickedPartialQty":12.5},{"ItemKey":"INSALT02","LineId":3,"StandardQty":80.8,"PackSize":25,"ToPickedPartialQty":5.8},{"ItemKey":"INSALT02","LineId":3,"StandardQty":80.8,"PackSize":25,"ToPickedPartialQty":5.8},{"ItemKey":"INGUAR01","LineId":4,"StandardQty":10.1,"PackSize":25,"ToPickedPartialQty":10.1},{"ItemKey":"INGUAR01","LineId":4,"StandardQty":10.1,"PackSize":25,"ToPickedPartialQty":10.1},{"ItemKey":"INXANT01","LineId":5,"StandardQty":8.08,"PackSize":25,"ToPickedPartialQty":8.08},{"ItemKey":"INXANT01","LineId":5,"StandardQty":8.08,"PackSize":25,"ToPickedPartialQty":8.08},{"ItemKey":"INSBIC01","LineId":6,"StandardQty":3.03,"PackSize":25,"ToPickedPartialQty":3.03},{"ItemKey":"INSBIC01","LineId":6,"StandardQty":3.03,"PackSize":25,"ToPickedPartialQty":3.03},{"ItemKey":"INSAPP01","LineId":7,"StandardQty":4.04,"PackSize":25,"ToPickedPartialQty":4.04},{"ItemKey":"INSAPP01","LineId":7,"StandardQty":4.04,"PackSize":25,"ToPickedPartialQty":4.04},{"ItemKey":"INMSGT01","LineId":8,"StandardQty":20.2,"PackSize":25,"ToPickedPartialQty":20.2},{"ItemKey":"INMSGT01","LineId":8,"StandardQty":20.2,"PackSize":25,"ToPickedPartialQty":20.2}]
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial DEBUG - RunNo 214037 raw ingredients data: [{"ItemKey":"INSOYF01","LineId":2,"Description":"Soy Flour","Unit":"KG","StandardQty":252.5,"PackSize":20,"ToPickedPartialQty":12.5,"PickedPartialQty":null,"BatchNo":"850824","RowNum":2},{"ItemKey":"INSOYI01","LineId":2,"Description":"Isolate Soy Protein","Unit":"KG","StandardQty":252.5,"PackSize":20,"ToPickedPartialQty":12.5,"PickedPartialQty":null,"BatchNo":"850823","RowNum":1},{"ItemKey":"INSALT02","LineId":3,"Description":"Salt Medium without anticaking","Unit":"KG","StandardQty":80.8,"PackSize":25,"ToPickedPartialQty":5.8,"PickedPartialQty":null,"BatchNo":"850823","RowNum":1},{"ItemKey":"INSALT02","LineId":3,"Description":"Salt Medium without anticaking","Unit":"KG","StandardQty":80.8,"PackSize":25,"ToPickedPartialQty":5.8,"PickedPartialQty":null,"BatchNo":"850824","RowNum":2},{"ItemKey":"INGUAR01","LineId":4,"Description":"Guar Gum","Unit":"KG","StandardQty":10.1,"PackSize":25,"ToPickedPartialQty":10.1,"PickedPartialQty":null,"BatchNo":"850823","RowNum":1},{"ItemKey":"INGUAR01","LineId":4,"Description":"Guar Gum","Unit":"KG","StandardQty":10.1,"PackSize":25,"ToPickedPartialQty":10.1,"PickedPartialQty":null,"BatchNo":"850824","RowNum":2},{"ItemKey":"INXANT01","LineId":5,"Description":"Xanthan","Unit":"KG","StandardQty":8.08,"PackSize":25,"ToPickedPartialQty":8.08,"PickedPartialQty":null,"BatchNo":"850823","RowNum":1},{"ItemKey":"INXANT01","LineId":5,"Description":"Xanthan","Unit":"KG","StandardQty":8.08,"PackSize":25,"ToPickedPartialQty":8.08,"PickedPartialQty":null,"BatchNo":"850824","RowNum":2},{"ItemKey":"INSBIC01","LineId":6,"Description":"Sodium Bicarbonate","Unit":"KG","StandardQty":3.03,"PackSize":25,"ToPickedPartialQty":3.03,"PickedPartialQty":null,"BatchNo":"850823","RowNum":1},{"ItemKey":"INSBIC01","LineId":6,"Description":"Sodium Bicarbonate","Unit":"KG","StandardQty":3.03,"PackSize":25,"ToPickedPartialQty":3.03,"PickedPartialQty":null,"BatchNo":"850824","RowNum":2},{"ItemKey":"INSAPP01","LineId":7,"Description":"SAPP 28","Unit":"KG","StandardQty":4.04,"PackSize":25,"ToPickedPartialQty":4.04,"PickedPartialQty":null,"BatchNo":"850823","RowNum":1},{"ItemKey":"INSAPP01","LineId":7,"Description":"SAPP 28","Unit":"KG","StandardQty":4.04,"PackSize":25,"ToPickedPartialQty":4.04,"PickedPartialQty":null,"BatchNo":"850824","RowNum":2},{"ItemKey":"INMSGT01","LineId":8,"Description":"MSG size 100-200 mseh","Unit":"KG","StandardQty":20.2,"PackSize":25,"ToPickedPartialQty":20.2,"PickedPartialQty":null,"BatchNo":"850823","RowNum":1},{"ItemKey":"INMSGT01","LineId":8,"Description":"MSG size 100-200 mseh","Unit":"KG","StandardQty":20.2,"PackSize":25,"ToPickedPartialQty":20.2,"PickedPartialQty":null,"BatchNo":"850824","RowNum":2}]
+WARNING - 2025-08-06 07:24:16 --> CreateRunPartial FORMULA DISCREPANCY - RunNo 214037 LineId 2 has multiple ingredients: INSOYF01, INSOYI01
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial CONSOLIDATION - RunNo 214037 LineId 2: Selected INSOYF01 from batch 850824 (RowNum 2)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial QUANTITY AGGREGATION - RunNo 214037 LineId 2: INSOYF01 TotalQty=505 (from 2 batch records)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial QUANTITY AGGREGATION - RunNo 214037 LineId 3: INSALT02 TotalQty=161.6 (from 2 batch records)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial QUANTITY AGGREGATION - RunNo 214037 LineId 4: INGUAR01 TotalQty=20.2 (from 2 batch records)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial QUANTITY AGGREGATION - RunNo 214037 LineId 5: INXANT01 TotalQty=16.16 (from 2 batch records)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial QUANTITY AGGREGATION - RunNo 214037 LineId 6: INSBIC01 TotalQty=6.06 (from 2 batch records)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial QUANTITY AGGREGATION - RunNo 214037 LineId 7: INSAPP01 TotalQty=8.08 (from 2 batch records)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial QUANTITY AGGREGATION - RunNo 214037 LineId 8: INMSGT01 TotalQty=40.4 (from 2 batch records)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial DEBUG - RunNo 214037 final ingredients after consolidation: ["INSOYF01","INSALT02","INGUAR01","INXANT01","INSBIC01","INSAPP01","INMSGT01"]
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial: FG Item added to header - TB317-01 (Battermix)
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial: Retrieved print details for RunNo 214037 - Batches found: 2, Total FG Qty: 1010, Ingredients found: 7
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial FINAL: INSOYF01 - QtyPerBatch: 252.5, TotalQty: 505, PartialQty: 12.5
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial FINAL: INSALT02 - QtyPerBatch: 80.8, TotalQty: 161.6, PartialQty: 5.8
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial FINAL: INGUAR01 - QtyPerBatch: 10.1, TotalQty: 20.2, PartialQty: 10.1
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial FINAL: INXANT01 - QtyPerBatch: 8.08, TotalQty: 16.16, PartialQty: 8.08
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial FINAL: INSBIC01 - QtyPerBatch: 3.03, TotalQty: 6.06, PartialQty: 3.03
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial FINAL: INSAPP01 - QtyPerBatch: 4.04, TotalQty: 8.08, PartialQty: 4.04
+INFO - 2025-08-06 07:24:16 --> CreateRunPartial FINAL: INMSGT01 - QtyPerBatch: 20.2, TotalQty: 40.4, PartialQty: 20.2
+DEBUG - 2025-08-06 07:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:28:09 --> User action: home_index
+DEBUG - 2025-08-06 07:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:30:49 --> User action: index
+DEBUG - 2025-08-06 07:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:30:53 --> User action: ajaxlist
+INFO - 2025-08-06 07:30:53 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:30:58 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:30:58 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+ERROR - 2025-08-06 07:30:58 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'INMAST'.
+ERROR - 2025-08-06 07:30:58 --> CreateRunBulk: Error getting ingredients - [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'INMAST'.
+DEBUG - 2025-08-06 07:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Found 0 raw ingredients from TFCMOBILE (simple query)
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Found 14 raw ingredients from TFCPILOT3 (full query with INMAST)
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Raw ingredients data: [{"ItemKey":"INSOYF01","LineId":2,"BatchNo":"850824","ToPickedBulkQty":12},{"ItemKey":"INSOYI01","LineId":2,"BatchNo":"850823","ToPickedBulkQty":12},{"ItemKey":"INSALT02","LineId":3,"BatchNo":"850823","ToPickedBulkQty":3},{"ItemKey":"INSALT02","LineId":3,"BatchNo":"850824","ToPickedBulkQty":3},{"ItemKey":"INGUAR01","LineId":4,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INGUAR01","LineId":4,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INXANT01","LineId":5,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INXANT01","LineId":5,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INSBIC01","LineId":6,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INSBIC01","LineId":6,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INSAPP01","LineId":7,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INSAPP01","LineId":7,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INMSGT01","LineId":8,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INMSGT01","LineId":8,"BatchNo":"850824","ToPickedBulkQty":0}]
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Grouped into 8 ingredient groups: INSOYF01, INSOYI01, INSALT02, INGUAR01, INXANT01, INSBIC01, INSAPP01, INMSGT01
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSOYF01 with 1 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSOYF01, BatchNo: 850824, StandardQty: 252.5, TopickedStdQty: 240
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSOYF01","Description":"Soy Flour","Unit":"KG","QtyPerBatch":252.5,"TotalQty":252.5,"PackSize":20,"BulkQty":12,"BulkQtyPerBatch":12}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSOYI01 with 1 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSOYI01, BatchNo: 850823, StandardQty: 252.5, TopickedStdQty: 240
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSOYI01","Description":"Isolate Soy Protein","Unit":"KG","QtyPerBatch":252.5,"TotalQty":252.5,"PackSize":20,"BulkQty":12,"BulkQtyPerBatch":12}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSALT02 with 2 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSALT02, BatchNo: 850824, StandardQty: 80.8, TopickedStdQty: 75
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSALT02, BatchNo: 850823, StandardQty: 80.8, TopickedStdQty: 75
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSALT02","Description":"Salt Medium without anticaking","Unit":"KG","QtyPerBatch":80.8,"TotalQty":161.6,"PackSize":25,"BulkQty":3,"BulkQtyPerBatch":3}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INGUAR01 with 2 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INGUAR01, BatchNo: 850824, StandardQty: 10.1, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INGUAR01, BatchNo: 850823, StandardQty: 10.1, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INGUAR01","Description":"Guar Gum","Unit":"KG","QtyPerBatch":10.1,"TotalQty":20.2,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INXANT01 with 2 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INXANT01, BatchNo: 850824, StandardQty: 8.08, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INXANT01, BatchNo: 850823, StandardQty: 8.08, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INXANT01","Description":"Xanthan","Unit":"KG","QtyPerBatch":8.08,"TotalQty":16.16,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSBIC01 with 2 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSBIC01, BatchNo: 850824, StandardQty: 3.03, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSBIC01, BatchNo: 850823, StandardQty: 3.03, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSBIC01","Description":"Sodium Bicarbonate","Unit":"KG","QtyPerBatch":3.03,"TotalQty":6.06,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSAPP01 with 2 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSAPP01, BatchNo: 850824, StandardQty: 4.04, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSAPP01, BatchNo: 850823, StandardQty: 4.04, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSAPP01","Description":"SAPP 28","Unit":"KG","QtyPerBatch":4.04,"TotalQty":8.08,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INMSGT01 with 2 records
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INMSGT01, BatchNo: 850824, StandardQty: 20.2, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INMSGT01, BatchNo: 850823, StandardQty: 20.2, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INMSGT01","Description":"MSG size 100-200 mseh","Unit":"KG","QtyPerBatch":20.2,"TotalQty":40.4,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk DEBUG: RunNo 215235 - Final consolidated ingredients count: 8
+INFO - 2025-08-06 07:38:23 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Found 0 raw ingredients from TFCMOBILE (simple query)
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Found 14 raw ingredients from TFCPILOT3 (full query with INMAST)
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Raw ingredients data: [{"ItemKey":"INSOYF01","LineId":2,"BatchNo":"850824","ToPickedBulkQty":12},{"ItemKey":"INSOYI01","LineId":2,"BatchNo":"850823","ToPickedBulkQty":12},{"ItemKey":"INSALT02","LineId":3,"BatchNo":"850823","ToPickedBulkQty":3},{"ItemKey":"INSALT02","LineId":3,"BatchNo":"850824","ToPickedBulkQty":3},{"ItemKey":"INGUAR01","LineId":4,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INGUAR01","LineId":4,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INXANT01","LineId":5,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INXANT01","LineId":5,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INSBIC01","LineId":6,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INSBIC01","LineId":6,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INSAPP01","LineId":7,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INSAPP01","LineId":7,"BatchNo":"850824","ToPickedBulkQty":0},{"ItemKey":"INMSGT01","LineId":8,"BatchNo":"850823","ToPickedBulkQty":0},{"ItemKey":"INMSGT01","LineId":8,"BatchNo":"850824","ToPickedBulkQty":0}]
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Grouped into 8 ingredient groups: INSOYF01, INSOYI01, INSALT02, INGUAR01, INXANT01, INSBIC01, INSAPP01, INMSGT01
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSOYF01 with 1 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSOYF01, BatchNo: 850824, StandardQty: 252.5, TopickedStdQty: 240
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSOYF01","Description":"Soy Flour","Unit":"KG","QtyPerBatch":252.5,"TotalQty":252.5,"PackSize":20,"BulkQty":12,"BulkQtyPerBatch":12}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSOYI01 with 1 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSOYI01, BatchNo: 850823, StandardQty: 252.5, TopickedStdQty: 240
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSOYI01","Description":"Isolate Soy Protein","Unit":"KG","QtyPerBatch":252.5,"TotalQty":252.5,"PackSize":20,"BulkQty":12,"BulkQtyPerBatch":12}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSALT02 with 2 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSALT02, BatchNo: 850824, StandardQty: 80.8, TopickedStdQty: 75
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSALT02, BatchNo: 850823, StandardQty: 80.8, TopickedStdQty: 75
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSALT02","Description":"Salt Medium without anticaking","Unit":"KG","QtyPerBatch":80.8,"TotalQty":161.6,"PackSize":25,"BulkQty":3,"BulkQtyPerBatch":3}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INGUAR01 with 2 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INGUAR01, BatchNo: 850824, StandardQty: 10.1, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INGUAR01, BatchNo: 850823, StandardQty: 10.1, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INGUAR01","Description":"Guar Gum","Unit":"KG","QtyPerBatch":10.1,"TotalQty":20.2,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INXANT01 with 2 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INXANT01, BatchNo: 850824, StandardQty: 8.08, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INXANT01, BatchNo: 850823, StandardQty: 8.08, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INXANT01","Description":"Xanthan","Unit":"KG","QtyPerBatch":8.08,"TotalQty":16.16,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSBIC01 with 2 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSBIC01, BatchNo: 850824, StandardQty: 3.03, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSBIC01, BatchNo: 850823, StandardQty: 3.03, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSBIC01","Description":"Sodium Bicarbonate","Unit":"KG","QtyPerBatch":3.03,"TotalQty":6.06,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INSAPP01 with 2 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSAPP01, BatchNo: 850824, StandardQty: 4.04, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INSAPP01, BatchNo: 850823, StandardQty: 4.04, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INSAPP01","Description":"SAPP 28","Unit":"KG","QtyPerBatch":4.04,"TotalQty":8.08,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Processing ItemKey: INMSGT01 with 2 records
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INMSGT01, BatchNo: 850824, StandardQty: 20.2, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - ItemKey: INMSGT01, BatchNo: 850823, StandardQty: 20.2, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Consolidated ingredient: {"ItemKey":"INMSGT01","Description":"MSG size 100-200 mseh","Unit":"KG","QtyPerBatch":20.2,"TotalQty":40.4,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk DEBUG: RunNo 215235 - Final consolidated ingredients count: 8
+INFO - 2025-08-06 07:38:30 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk: Found FG item TA101A01 - Predust for RunNo 215234
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk: FG Qty set to standard batch size: 505
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Found 0 raw ingredients from TFCMOBILE (simple query)
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Found 6 raw ingredients from TFCPILOT3 (full query with INMAST)
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Raw ingredients data: [{"ItemKey":"INK1ST01","LineId":2,"BatchNo":"850821","ToPickedBulkQty":10},{"ItemKey":"INK1ST01","LineId":2,"BatchNo":"850822","ToPickedBulkQty":10},{"ItemKey":"INBB01ST","LineId":3,"BatchNo":"850821","ToPickedBulkQty":10},{"ItemKey":"INBB01ST","LineId":3,"BatchNo":"850822","ToPickedBulkQty":10},{"ItemKey":"INSALT02","LineId":4,"BatchNo":"850821","ToPickedBulkQty":0},{"ItemKey":"INSALT02","LineId":4,"BatchNo":"850822","ToPickedBulkQty":0}]
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Grouped into 3 ingredient groups: INK1ST01, INBB01ST, INSALT02
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Processing ItemKey: INK1ST01 with 2 records
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - ItemKey: INK1ST01, BatchNo: 850822, StandardQty: 214.625, TopickedStdQty: 202
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - ItemKey: INK1ST01, BatchNo: 850821, StandardQty: 214.625, TopickedStdQty: 202
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Consolidated ingredient: {"ItemKey":"INK1ST01","Description":"K1 Starch","Unit":"KG","QtyPerBatch":214.625,"TotalQty":429.25,"PackSize":20.2,"BulkQty":10,"BulkQtyPerBatch":10}
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Processing ItemKey: INBB01ST with 2 records
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - ItemKey: INBB01ST, BatchNo: 850822, StandardQty: 214.625, TopickedStdQty: 204
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - ItemKey: INBB01ST, BatchNo: 850821, StandardQty: 214.625, TopickedStdQty: 204
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Consolidated ingredient: {"ItemKey":"INBB01ST","Description":"BB-01 Starch","Unit":"KG","QtyPerBatch":214.625,"TotalQty":429.25,"PackSize":20.4,"BulkQty":10,"BulkQtyPerBatch":10}
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Processing ItemKey: INSALT02 with 2 records
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - ItemKey: INSALT02, BatchNo: 850822, StandardQty: 5.05, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - ItemKey: INSALT02, BatchNo: 850821, StandardQty: 5.05, TopickedStdQty: 0
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Consolidated ingredient: {"ItemKey":"INSALT02","Description":"Salt Medium without anticaking","Unit":"KG","QtyPerBatch":5.05,"TotalQty":10.1,"PackSize":25,"BulkQty":0,"BulkQtyPerBatch":0}
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk DEBUG: RunNo 215234 - Final consolidated ingredients count: 3
+INFO - 2025-08-06 07:38:43 --> CreateRunBulk: Found 3 consolidated ingredients for RunNo 215234
+DEBUG - 2025-08-06 07:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 07:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 07:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 07:39:39 --> Attempting authentication for user: admin
+DEBUG - 2025-08-06 07:39:39 --> Starting authentication for user: admin
+DEBUG - 2025-08-06 07:39:39 --> LDAP authentication enabled, attempting LDAP authentication
+DEBUG - 2025-08-06 07:39:39 --> LDAP: Starting authentication for user: admin
+DEBUG - 2025-08-06 07:39:39 --> LDAP: Connecting to ldap://192.168.0.1:389
+WARNING - 2025-08-06 07:39:39 --> [DEPRECATED] Usage of ldap_connect with two arguments is deprecated in APPPATH/Services/LdapService.php on line 169.
+ 1 APPPATH/Services/LdapService.php(169): ldap_connect('ldap://192.168.0.1', 389)
+ 2 APPPATH/Services/LdapService.php(48): App\Services\LdapService->connect()
+ 3 APPPATH/Models/AuthModel.php(79): App\Services\LdapService->authenticate('admin', 'admin')
+ 4 APPPATH/Controllers/Auth.php(76): App\Models\AuthModel->authenticateUser('admin', 'admin')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->authenticate()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-06 07:39:39 --> LDAP: Successfully bound with service account
+DEBUG - 2025-08-06 07:39:39 --> LDAP: Successfully connected to Active Directory
+DEBUG - 2025-08-06 07:39:39 --> LDAP: Attempting to bind with DN: admin@NWFTH.com
+DEBUG - 2025-08-06 07:39:39 --> LDAP: Authentication failed - Invalid credentials
+DEBUG - 2025-08-06 07:39:39 --> LDAP: Disconnected from Active Directory
+DEBUG - 2025-08-06 07:39:39 --> LDAP authentication failed: Invalid username or password
+DEBUG - 2025-08-06 07:39:39 --> Falling back to local database authentication
+DEBUG - 2025-08-06 07:39:39 --> Attempting authentication for user: admin
+DEBUG - 2025-08-06 07:39:39 --> User query result: "User found"
+DEBUG - 2025-08-06 07:39:39 --> Password verified with bcrypt
+DEBUG - 2025-08-06 07:39:39 --> Authentication successful
+DEBUG - 2025-08-06 07:39:39 --> Skipping last_login update (column does not exist)
+DEBUG - 2025-08-06 07:39:39 --> Returning success result: {"success":true,"user_id":1,"username":"admin","full_name":"Admin Admin","first_name":"Admin","last_name":"Admin","email":"admin@nwfth.com","department":"Production","user_level":1}
+DEBUG - 2025-08-06 07:39:39 --> Authentication result: {"success":true,"user_id":1,"username":"admin","full_name":"Admin Admin","first_name":"Admin","last_name":"Admin","email":"admin@nwfth.com","department":"Production","user_level":1}
+DEBUG - 2025-08-06 07:39:39 --> Authentication successful, setting session
+DEBUG - 2025-08-06 07:39:39 --> Session set. Logged_in status: true
+INFO - 2025-08-06 07:39:39 --> User admin logged in successfully from IP: 127.0.0.1
+DEBUG - 2025-08-06 07:39:39 --> Redirecting to: http://localhost:8080/
+DEBUG - 2025-08-06 07:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:39:39 --> User action: home_index
+DEBUG - 2025-08-06 07:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:39:45 --> User action: index
+DEBUG - 2025-08-06 07:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:39:45 --> User action: ajaxlist
+INFO - 2025-08-06 07:39:45 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:39:54 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:39:54 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:39:54 --> CreateRunBulk: Found 0 raw ingredients from TFCMOBILE
+INFO - 2025-08-06 07:39:54 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (fallback)
+INFO - 2025-08-06 07:39:54 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:40:58 --> User action: index
+DEBUG - 2025-08-06 07:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:41:01 --> User action: ajaxlist
+INFO - 2025-08-06 07:41:01 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:41:04 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:41:04 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:41:04 --> CreateRunBulk: Found 0 raw ingredients from TFCMOBILE
+INFO - 2025-08-06 07:41:04 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (fallback)
+INFO - 2025-08-06 07:41:04 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:43:43 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:43:43 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:43:43 --> CreateRunBulk: Found 0 raw ingredients from TFCMOBILE
+INFO - 2025-08-06 07:43:43 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (fallback)
+INFO - 2025-08-06 07:43:43 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 07:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 07:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 07:44:16 --> Attempting authentication for user: admin
+DEBUG - 2025-08-06 07:44:16 --> Starting authentication for user: admin
+DEBUG - 2025-08-06 07:44:16 --> LDAP authentication enabled, attempting LDAP authentication
+DEBUG - 2025-08-06 07:44:16 --> LDAP: Starting authentication for user: admin
+DEBUG - 2025-08-06 07:44:16 --> LDAP: Connecting to ldap://192.168.0.1:389
+WARNING - 2025-08-06 07:44:16 --> [DEPRECATED] Usage of ldap_connect with two arguments is deprecated in APPPATH/Services/LdapService.php on line 169.
+ 1 APPPATH/Services/LdapService.php(169): ldap_connect('ldap://192.168.0.1', 389)
+ 2 APPPATH/Services/LdapService.php(48): App\Services\LdapService->connect()
+ 3 APPPATH/Models/AuthModel.php(79): App\Services\LdapService->authenticate('admin', 'admin')
+ 4 APPPATH/Controllers/Auth.php(76): App\Models\AuthModel->authenticateUser('admin', 'admin')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->authenticate()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-06 07:44:16 --> LDAP: Successfully bound with service account
+DEBUG - 2025-08-06 07:44:16 --> LDAP: Successfully connected to Active Directory
+DEBUG - 2025-08-06 07:44:16 --> LDAP: Attempting to bind with DN: admin@NWFTH.com
+DEBUG - 2025-08-06 07:44:16 --> LDAP: Authentication failed - Invalid credentials
+DEBUG - 2025-08-06 07:44:16 --> LDAP: Disconnected from Active Directory
+DEBUG - 2025-08-06 07:44:16 --> LDAP authentication failed: Invalid username or password
+DEBUG - 2025-08-06 07:44:16 --> Falling back to local database authentication
+DEBUG - 2025-08-06 07:44:16 --> Attempting authentication for user: admin
+DEBUG - 2025-08-06 07:44:16 --> User query result: "User found"
+DEBUG - 2025-08-06 07:44:16 --> Password verified with bcrypt
+DEBUG - 2025-08-06 07:44:16 --> Authentication successful
+DEBUG - 2025-08-06 07:44:16 --> Skipping last_login update (column does not exist)
+DEBUG - 2025-08-06 07:44:16 --> Returning success result: {"success":true,"user_id":1,"username":"admin","full_name":"Admin Admin","first_name":"Admin","last_name":"Admin","email":"admin@nwfth.com","department":"Production","user_level":1}
+DEBUG - 2025-08-06 07:44:16 --> Authentication result: {"success":true,"user_id":1,"username":"admin","full_name":"Admin Admin","first_name":"Admin","last_name":"Admin","email":"admin@nwfth.com","department":"Production","user_level":1}
+DEBUG - 2025-08-06 07:44:16 --> Authentication successful, setting session
+DEBUG - 2025-08-06 07:44:16 --> Session set. Logged_in status: true
+INFO - 2025-08-06 07:44:16 --> User admin logged in successfully from IP: 127.0.0.1
+DEBUG - 2025-08-06 07:44:16 --> Redirecting to: http://localhost:8080/
+DEBUG - 2025-08-06 07:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:44:16 --> User action: home_index
+DEBUG - 2025-08-06 07:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:44:22 --> User action: index
+DEBUG - 2025-08-06 07:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:44:22 --> User action: ajaxlist
+INFO - 2025-08-06 07:44:22 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:44:29 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:44:29 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:44:29 --> CreateRunBulk: Found 0 raw ingredients from TFCMOBILE
+INFO - 2025-08-06 07:44:29 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (fallback)
+INFO - 2025-08-06 07:44:29 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:45:24 --> User action: index
+DEBUG - 2025-08-06 07:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:45:24 --> User action: ajaxlist
+INFO - 2025-08-06 07:45:24 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:45:29 --> User action: ajaxlist
+INFO - 2025-08-06 07:45:29 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":"215235"}
+DEBUG - 2025-08-06 07:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:45:39 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:45:39 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:45:39 --> CreateRunBulk: Found 0 raw ingredients from TFCMOBILE
+INFO - 2025-08-06 07:45:39 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (fallback)
+INFO - 2025-08-06 07:45:39 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:48:50 --> User action: index
+DEBUG - 2025-08-06 07:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:48:54 --> User action: ajaxlist
+INFO - 2025-08-06 07:48:54 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:49:10 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:49:10 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:49:10 --> CreateRunBulk: Found 0 raw ingredients from TFCMOBILE
+INFO - 2025-08-06 07:49:10 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (fallback)
+INFO - 2025-08-06 07:49:10 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:49:14 --> User action: index
+DEBUG - 2025-08-06 07:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:49:18 --> User action: ajaxlist
+INFO - 2025-08-06 07:49:18 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:50:44 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:50:44 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:50:44 --> CreateRunBulk: Found 0 raw ingredients from TFCMOBILE
+INFO - 2025-08-06 07:50:44 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (fallback)
+INFO - 2025-08-06 07:50:44 --> CreateRunBulk: Found 8 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:58:10 --> User action: index
+DEBUG - 2025-08-06 07:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:58:10 --> User action: ajaxlist
+INFO - 2025-08-06 07:58:10 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:58:14 --> User action: ajaxlist
+INFO - 2025-08-06 07:58:14 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":"215235"}
+DEBUG - 2025-08-06 07:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 07:58:23 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 07:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:58:59 --> User action: index
+DEBUG - 2025-08-06 07:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:59:03 --> User action: ajaxlist
+INFO - 2025-08-06 07:59:03 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 07:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 07:59:05 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 08:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:03:38 --> User action: index
+DEBUG - 2025-08-06 08:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:03:42 --> User action: ajaxlist
+INFO - 2025-08-06 08:03:42 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+CRITICAL - 2025-08-06 08:03:56 --> ParseError: syntax error, unexpected token "catch", expecting "function"
+[Method: GET, Route: CreateRunPartial]
+in APPPATH/Controllers/CreateRunPartial.php on line 1084.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 08:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:04:04 --> User action: index
+DEBUG - 2025-08-06 08:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:04:09 --> User action: ajaxlist
+INFO - 2025-08-06 08:04:09 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+CRITICAL - 2025-08-06 08:05:11 --> ParseError: syntax error, unexpected token "catch", expecting "function"
+[Method: GET, Route: CreateRunPartial]
+in APPPATH/Controllers/CreateRunPartial.php on line 1088.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 08:06:15 --> ParseError: syntax error, unexpected variable "$runData", expecting "function"
+[Method: GET, Route: CreateRunPartial]
+in APPPATH/Controllers/CreateRunPartial.php on line 1094.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 08:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:06:24 --> User action: index
+DEBUG - 2025-08-06 08:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:06:24 --> User action: ajaxlist
+INFO - 2025-08-06 08:06:24 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:06:29 --> User action: ajaxlist
+INFO - 2025-08-06 08:06:29 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":"215235"}
+DEBUG - 2025-08-06 08:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 08:06:40 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 08:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:11:51 --> User action: index
+DEBUG - 2025-08-06 08:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:11:53 --> User action: index
+DEBUG - 2025-08-06 08:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:11:57 --> User action: ajaxlist
+INFO - 2025-08-06 08:11:57 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:11:59 --> User action: ajaxlist
+INFO - 2025-08-06 08:11:59 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 08:18:12 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 08:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:18:18 --> User action: home_index
+CRITICAL - 2025-08-06 08:18:23 --> ParseError: syntax error, unexpected variable "$runData", expecting "function"
+[Method: GET, Route: CreateRunPartial]
+in APPPATH/Controllers/CreateRunPartial.php on line 1094.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(885): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 08:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:22:53 --> User action: index
+DEBUG - 2025-08-06 08:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:22:57 --> User action: ajaxlist
+INFO - 2025-08-06 08:22:57 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: Found FG item TB317-01 - Battermix for RunNo 214037
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial DEBUG - RunNo 214037 raw ingredients from TFCMOBILE: []
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial DEBUG - RunNo 214037 original PNITEM ingredients: [{"BatchNo":"850823","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSOYI01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSOYF01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"}]
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Partial: 25
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Partial: 11.6
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Partial: 20.2
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Partial: 16.16
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Partial: 6.06
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Partial: 8.08
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Partial: 40.4
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: Found 7 consolidated ingredients for RunNo 214037
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: FG Item added to header - TB317-01 (Battermix)
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial: Retrieved print details for RunNo 214037 - Batches found: 2, Total FG Qty: 1010, Ingredients found: 7
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial FINAL: INSOYF01 - QtyPerBatch: 252.5, TotalQty: 505, PartialQty: 12.5
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial FINAL: INSALT02 - QtyPerBatch: 80.8, TotalQty: 161.6, PartialQty: 5.8
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial FINAL: INGUAR01 - QtyPerBatch: 10.1, TotalQty: 20.2, PartialQty: 10.1
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial FINAL: INXANT01 - QtyPerBatch: 8.08, TotalQty: 16.16, PartialQty: 8.08
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial FINAL: INSBIC01 - QtyPerBatch: 3.03, TotalQty: 6.06, PartialQty: 3.03
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial FINAL: INSAPP01 - QtyPerBatch: 4.04, TotalQty: 8.08, PartialQty: 4.04
+INFO - 2025-08-06 08:22:59 --> CreateRunPartial FINAL: INMSGT01 - QtyPerBatch: 20.2, TotalQty: 40.4, PartialQty: 20.2
+DEBUG - 2025-08-06 08:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:23:40 --> User action: home_index
+DEBUG - 2025-08-06 08:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:23:45 --> User action: index
+DEBUG - 2025-08-06 08:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 08:23:47 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 08:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:23:50 --> User action: ajaxlist
+INFO - 2025-08-06 08:23:50 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: Found FG item TB317-01 - Battermix for RunNo 214037
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial DEBUG - RunNo 214037 raw ingredients from TFCMOBILE: []
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial DEBUG - RunNo 214037 original PNITEM ingredients: [{"BatchNo":"850823","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSOYI01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSOYF01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"}]
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Partial: 25
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Partial: 11.6
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Partial: 20.2
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Partial: 16.16
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Partial: 6.06
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Partial: 8.08
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Partial: 40.4
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: Found 7 consolidated ingredients for RunNo 214037
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: FG Item added to header - TB317-01 (Battermix)
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial: Retrieved print details for RunNo 214037 - Batches found: 2, Total FG Qty: 1010, Ingredients found: 7
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial FINAL: INSOYF01 - QtyPerBatch: 252.5, TotalQty: 505, PartialQty: 12.5
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial FINAL: INSALT02 - QtyPerBatch: 80.8, TotalQty: 161.6, PartialQty: 5.8
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial FINAL: INGUAR01 - QtyPerBatch: 10.1, TotalQty: 20.2, PartialQty: 10.1
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial FINAL: INXANT01 - QtyPerBatch: 8.08, TotalQty: 16.16, PartialQty: 8.08
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial FINAL: INSBIC01 - QtyPerBatch: 3.03, TotalQty: 6.06, PartialQty: 3.03
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial FINAL: INSAPP01 - QtyPerBatch: 4.04, TotalQty: 8.08, PartialQty: 4.04
+INFO - 2025-08-06 08:25:47 --> CreateRunPartial FINAL: INMSGT01 - QtyPerBatch: 20.2, TotalQty: 40.4, PartialQty: 20.2
+DEBUG - 2025-08-06 08:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:32 --> CreateRunBulk: Starting deletion of RunNo 215235 (type: integer)
+INFO - 2025-08-06 08:31:32 --> CreateRunBulk: RunNo 215235 found in TFCMOBILE: 0 records, TFCPILOT3: 2 records
+INFO - 2025-08-06 08:31:32 --> CreateRunBulk: Found 0 run records and 0 picking records for RunNo 215235 in TFCMOBILE
+INFO - 2025-08-06 08:31:32 --> CreateRunBulk: Successfully deleted 14 picking records for RunNo 215235 from TFCPILOT3
+INFO - 2025-08-06 08:31:32 --> CreateRunBulk: Successfully deleted 2 run records for RunNo 215235 from TFCPILOT3
+DEBUG - 2025-08-06 08:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:33 --> User action: ajaxlist
+INFO - 2025-08-06 08:31:33 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:35 --> User action: index
+DEBUG - 2025-08-06 08:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:39 --> User action: ajaxlist
+INFO - 2025-08-06 08:31:39 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:41 --> CreateRunPartial: Starting deletion of RunNo 214037 (type: integer)
+INFO - 2025-08-06 08:31:41 --> CreateRunPartial: RunNo 214037 found in TFCMOBILE: 0 records, TFCPILOT3: 2 records
+INFO - 2025-08-06 08:31:41 --> CreateRunPartial: Found 0 run records and 0 picking records for RunNo 214037 in TFCMOBILE
+INFO - 2025-08-06 08:31:41 --> CreateRunPartial: Successfully deleted 14 picking records for RunNo 214037 from TFCPILOT3
+INFO - 2025-08-06 08:31:41 --> CreateRunPartial: Successfully deleted 2 run records for RunNo 214037 from TFCPILOT3
+DEBUG - 2025-08-06 08:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:42 --> User action: ajaxlist
+INFO - 2025-08-06 08:31:42 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:43 --> User action: index
+DEBUG - 2025-08-06 08:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:44 --> User action: index
+DEBUG - 2025-08-06 08:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:49 --> User action: ajaxlist
+INFO - 2025-08-06 08:31:49 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:31:50 --> User action: ajaxlist
+INFO - 2025-08-06 08:31:50 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:32:04 --> CreateRunBulk::create() called with method: POST
+DEBUG - 2025-08-06 08:32:04 --> POST data: {"run_no":"215235","selected_batches":[{"batch_no":"850824","formula_id":"TB317-01","batch_weight":"1010","formula_desc":"Battermix"},{"batch_no":"850823","formula_id":"TB317-01","batch_weight":"1010","formula_desc":"Battermix"}],"csrf_test_name":"cc62c6c7096e459b834436df201c7ecb7a60a0c3eba5a2678ad272703a699d3d"}
+ERROR - 2025-08-06 08:32:04 --> [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated.
+ERROR - 2025-08-06 08:32:04 --> CreateRunBulk: Primary insert failed - {"code":"22001\/8152","message":"[Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated."}
+ERROR - 2025-08-06 08:32:04 --> CreateRunBulk create error: Database insert failed: [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]String or binary data would be truncated.
+DEBUG - 2025-08-06 08:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:33:20 --> User action: index
+DEBUG - 2025-08-06 08:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:33:24 --> User action: ajaxlist
+INFO - 2025-08-06 08:33:24 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:37:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:37:46 --> User action: index
+DEBUG - 2025-08-06 08:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:37:47 --> User action: index
+DEBUG - 2025-08-06 08:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:37:53 --> User action: ajaxlist
+INFO - 2025-08-06 08:37:53 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:37:54 --> User action: ajaxlist
+INFO - 2025-08-06 08:37:54 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk::create() called with method: POST
+DEBUG - 2025-08-06 08:38:11 --> POST data: {"run_no":"215235","selected_batches":[{"batch_no":"850824","formula_id":"TB317-01","batch_weight":"1010","formula_desc":"Battermix"},{"batch_no":"850823","formula_id":"TB317-01","batch_weight":"1010","formula_desc":"Battermix"}],"csrf_test_name":"242999179e8d78900eb365fdda1becca922bff137c469f6c07252152c06e0f3c"}
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Using truncated UserId: 'deachawa' (length: 8)
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated RunNo 215235, RowNum 1 to TFCPILOT3
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Found 8 ingredients for BatchNo 850824 (UserId: 'deachawa')
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey WFMEDP01 - Silo ingredient: YES (excluded)
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Skipping silo ingredient: WFMEDP01 from TFC1 (BatchNo: 850824)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSOYF01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSOYF01 = 20
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSOYF01, StandardQty=252.5, PackSize=20, ToPickedBulkQty=12, TopickedStdQty=240
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 2 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 2 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSALT02 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSALT02 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSALT02, StandardQty=80.8, PackSize=25, ToPickedBulkQty=3, TopickedStdQty=75
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 3 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 3 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INGUAR01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INGUAR01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INGUAR01, StandardQty=10.1, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 4 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 4 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INXANT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INXANT01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INXANT01, StandardQty=8.08, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 5 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 5 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSBIC01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSBIC01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSBIC01, StandardQty=3.03, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 6 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 6 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSAPP01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSAPP01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSAPP01, StandardQty=4.04, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 7 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 7 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INMSGT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INMSGT01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INMSGT01, StandardQty=20.2, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 8 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850824, LineId 8 to TFCPILOT3
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: BatchNo 850824 - Total ingredients: 8, Processed: 7, Silo-skipped: 1
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully created picking records for BatchNo 850824
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated RunNo 215235, RowNum 2 to TFCPILOT3
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Found 8 ingredients for BatchNo 850823 (UserId: 'deachawa')
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey WFMEDP01 - Silo ingredient: YES (excluded)
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Skipping silo ingredient: WFMEDP01 from TFC1 (BatchNo: 850823)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSOYI01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSOYI01 = 20
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSOYI01, StandardQty=252.5, PackSize=20, ToPickedBulkQty=12, TopickedStdQty=240
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 2 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 2 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSALT02 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSALT02 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSALT02, StandardQty=80.8, PackSize=25, ToPickedBulkQty=3, TopickedStdQty=75
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 3 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 3 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INGUAR01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INGUAR01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INGUAR01, StandardQty=10.1, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 4 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 4 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INXANT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INXANT01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INXANT01, StandardQty=8.08, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 5 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 5 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSBIC01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSBIC01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSBIC01, StandardQty=3.03, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 6 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 6 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INSAPP01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INSAPP01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INSAPP01, StandardQty=4.04, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 7 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 7 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey INMSGT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: Pack size for INMSGT01 = 25
+DEBUG - 2025-08-06 08:38:11 --> CreateRunBulk: ItemKey=INMSGT01, StandardQty=20.2, PackSize=25, ToPickedBulkQty=0, TopickedStdQty=0
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully inserted cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 8 to TFCMOBILE
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully replicated cust_BulkPicked RunNo 215235, BatchNo 850823, LineId 8 to TFCPILOT3
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: BatchNo 850823 - Total ingredients: 8, Processed: 7, Silo-skipped: 1
+INFO - 2025-08-06 08:38:11 --> CreateRunBulk: Successfully created picking records for BatchNo 850823
+DEBUG - 2025-08-06 08:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:14 --> User action: ajaxlist
+INFO - 2025-08-06 08:38:14 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:18 --> User action: index
+DEBUG - 2025-08-06 08:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:19 --> User action: index
+DEBUG - 2025-08-06 08:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:24 --> User action: ajaxlist
+INFO - 2025-08-06 08:38:24 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:26 --> User action: ajaxlist
+INFO - 2025-08-06 08:38:26 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial::create() called with method: POST
+DEBUG - 2025-08-06 08:38:42 --> POST data: {"run_no":"214036","selected_batches":[{"batch_no":"850824","formula_id":"TB317-01","batch_weight":"1010","formula_desc":"Battermix"},{"batch_no":"850823","formula_id":"TB317-01","batch_weight":"1010","formula_desc":"Battermix"}],"csrf_test_name":"0e15e88a3f0cc863f572f1add832914ab8178e8eddc72f9ffce4b502c24772bc"}
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Using truncated UserId: 'deachawa' (length: 8)
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated RunNo 214036, RowNum 1 to TFCPILOT3
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Found 8 ingredients for BatchNo 850824 (UserId: 'deachawa')
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey WFMEDP01 - Silo ingredient: YES (excluded)
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Skipping silo ingredient: WFMEDP01 from TFC1 (BatchNo: 850824)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSOYF01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSOYF01 = 20
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSOYF01, StandardQty=252.5, PackSize=20, ToPickedBulkQty=12, ToPickedPartialQty=12.5
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSOYF01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 2 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 2 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSALT02 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSALT02 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSALT02, StandardQty=80.8, PackSize=25, ToPickedBulkQty=3, ToPickedPartialQty=5.8
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSALT02 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 3 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 3 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INGUAR01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INGUAR01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INGUAR01, StandardQty=10.1, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=10.1
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INGUAR01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 4 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 4 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INXANT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INXANT01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INXANT01, StandardQty=8.08, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=8.08
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INXANT01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 5 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 5 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSBIC01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSBIC01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSBIC01, StandardQty=3.03, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=3.03
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSBIC01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 6 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 6 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSAPP01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSAPP01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSAPP01, StandardQty=4.04, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=4.04
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSAPP01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 7 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 7 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INMSGT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INMSGT01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INMSGT01, StandardQty=20.2, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=20.2
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INMSGT01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 8 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850824, LineId 8 to TFCPILOT3
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: BatchNo 850824 - Total ingredients: 8, Processed: 7, Silo-skipped: 1
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully created picking records for BatchNo 850824
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated RunNo 214036, RowNum 2 to TFCPILOT3
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Found 8 ingredients for BatchNo 850823 (UserId: 'deachawa')
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey WFMEDP01 - Silo ingredient: YES (excluded)
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Skipping silo ingredient: WFMEDP01 from TFC1 (BatchNo: 850823)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSOYI01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSOYI01 = 20
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSOYI01, StandardQty=252.5, PackSize=20, ToPickedBulkQty=12, ToPickedPartialQty=12.5
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSOYI01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 2 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 2 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSALT02 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSALT02 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSALT02, StandardQty=80.8, PackSize=25, ToPickedBulkQty=3, ToPickedPartialQty=5.8
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSALT02 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 3 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 3 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INGUAR01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INGUAR01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INGUAR01, StandardQty=10.1, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=10.1
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INGUAR01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 4 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 4 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INXANT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INXANT01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INXANT01, StandardQty=8.08, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=8.08
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INXANT01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 5 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 5 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSBIC01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSBIC01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSBIC01, StandardQty=3.03, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=3.03
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSBIC01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 6 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 6 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INSAPP01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INSAPP01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INSAPP01, StandardQty=4.04, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=4.04
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INSAPP01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 7 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 7 to TFCPILOT3
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey INMSGT01 - Silo ingredient: NO (included)
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Pack size for INMSGT01 = 25
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: ItemKey=INMSGT01, StandardQty=20.2, PackSize=25, ToPickedBulkQty=0, ToPickedPartialQty=20.2
+DEBUG - 2025-08-06 08:38:42 --> CreateRunPartial: Allergen for INMSGT01 = 'Numeric'
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully inserted cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 8 to TFCMOBILE
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully replicated cust_PartialPicked RunNo 214036, BatchNo 850823, LineId 8 to TFCPILOT3
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: BatchNo 850823 - Total ingredients: 8, Processed: 7, Silo-skipped: 1
+INFO - 2025-08-06 08:38:42 --> CreateRunPartial: Successfully created picking records for BatchNo 850823
+DEBUG - 2025-08-06 08:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:43 --> User action: ajaxlist
+INFO - 2025-08-06 08:38:43 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 08:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:48 --> User action: index
+DEBUG - 2025-08-06 08:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:49 --> User action: index
+DEBUG - 2025-08-06 08:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:55 --> User action: ajaxlist
+INFO - 2025-08-06 08:38:55 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:55 --> User action: ajaxlist
+INFO - 2025-08-06 08:38:55 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 08:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 08:38:57 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 08:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: Found FG item TB317-01 - Battermix for RunNo 214036
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial DEBUG - RunNo 214036 raw ingredients from TFCMOBILE: [{"ItemKey":"INSOYF01","LineId":2,"StandardQty":252.5,"PackSize":20,"ToPickedPartialQty":12.5},{"ItemKey":"INSOYI01","LineId":2,"StandardQty":252.5,"PackSize":20,"ToPickedPartialQty":12.5},{"ItemKey":"INSALT02","LineId":3,"StandardQty":80.8,"PackSize":25,"ToPickedPartialQty":5.8},{"ItemKey":"INSALT02","LineId":3,"StandardQty":80.8,"PackSize":25,"ToPickedPartialQty":5.8},{"ItemKey":"INGUAR01","LineId":4,"StandardQty":10.1,"PackSize":25,"ToPickedPartialQty":10.1},{"ItemKey":"INGUAR01","LineId":4,"StandardQty":10.1,"PackSize":25,"ToPickedPartialQty":10.1},{"ItemKey":"INXANT01","LineId":5,"StandardQty":8.08,"PackSize":25,"ToPickedPartialQty":8.08},{"ItemKey":"INXANT01","LineId":5,"StandardQty":8.08,"PackSize":25,"ToPickedPartialQty":8.08},{"ItemKey":"INSBIC01","LineId":6,"StandardQty":3.03,"PackSize":25,"ToPickedPartialQty":3.03},{"ItemKey":"INSBIC01","LineId":6,"StandardQty":3.03,"PackSize":25,"ToPickedPartialQty":3.03},{"ItemKey":"INSAPP01","LineId":7,"StandardQty":4.04,"PackSize":25,"ToPickedPartialQty":4.04},{"ItemKey":"INSAPP01","LineId":7,"StandardQty":4.04,"PackSize":25,"ToPickedPartialQty":4.04},{"ItemKey":"INMSGT01","LineId":8,"StandardQty":20.2,"PackSize":25,"ToPickedPartialQty":20.2},{"ItemKey":"INMSGT01","LineId":8,"StandardQty":20.2,"PackSize":25,"ToPickedPartialQty":20.2}]
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial DEBUG - RunNo 214036 original PNITEM ingredients: [{"BatchNo":"850823","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSOYI01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850823","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"WFMEDP01","LineId":1,"StdQty":631.25,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSOYF01","LineId":2,"StdQty":252.5,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSALT02","LineId":3,"StdQty":80.8,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INGUAR01","LineId":4,"StdQty":10.1,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INXANT01","LineId":5,"StdQty":8.08,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSBIC01","LineId":6,"StdQty":3.03,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INSAPP01","LineId":7,"StdQty":4.04,"Location":"TFC1"},{"BatchNo":"850824","ItemKey":"INMSGT01","LineId":8,"StdQty":20.2,"Location":"TFC1"}]
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Partial: 25
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Partial: 11.6
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Partial: 20.2
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Partial: 16.16
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Partial: 6.06
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Partial: 8.08
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Partial: 40.4
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: Found 7 consolidated ingredients for RunNo 214036
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: FG Item added to header - TB317-01 (Battermix)
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial: Retrieved print details for RunNo 214036 - Batches found: 2, Total FG Qty: 1010, Ingredients found: 7
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial FINAL: INSOYF01 - QtyPerBatch: 252.5, TotalQty: 505, PartialQty: 12.5
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial FINAL: INSALT02 - QtyPerBatch: 80.8, TotalQty: 161.6, PartialQty: 5.8
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial FINAL: INGUAR01 - QtyPerBatch: 10.1, TotalQty: 20.2, PartialQty: 10.1
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial FINAL: INXANT01 - QtyPerBatch: 8.08, TotalQty: 16.16, PartialQty: 8.08
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial FINAL: INSBIC01 - QtyPerBatch: 3.03, TotalQty: 6.06, PartialQty: 3.03
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial FINAL: INSAPP01 - QtyPerBatch: 4.04, TotalQty: 8.08, PartialQty: 4.04
+INFO - 2025-08-06 08:39:24 --> CreateRunPartial FINAL: INMSGT01 - QtyPerBatch: 20.2, TotalQty: 40.4, PartialQty: 20.2
+CRITICAL - 2025-08-06 01:11:14 --> ErrorException: Constant expression contains invalid operations
+[Method: GET, Route: CreateRunBulk]
+in APPPATH/Config/Cache.php on line 92.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-08-06 01:11:25 --> ErrorException: Constant expression contains invalid operations
+[Method: GET, Route: CreateRunBulk]
+in APPPATH/Config/Cache.php on line 92.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-08-06 01:13:15 --> ErrorException: Constant expression contains invalid operations
+[Method: GET, Route: /]
+in APPPATH/Config/Cache.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-08-06 01:14:48 --> Error: Class name must be a valid object or a string
+[Method: GET, Route: /]
+in SYSTEMPATH/Cache/CacheFactory.php on line 67.
+ 1 SYSTEMPATH/Config/Services.php(129): CodeIgniter\Cache\CacheFactory::getHandler()
+ 2 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::cache()
+ 3 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+ 4 SYSTEMPATH/Config/Services.php(124): CodeIgniter\Config\BaseService::getSharedInstance()
+ 5 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::cache()
+ 6 SYSTEMPATH/Config/BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+ 7 SYSTEMPATH/Config/Services.php(454): CodeIgniter\Config\BaseService::get()
+ 8 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::responsecache()
+ 9 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+10 SYSTEMPATH/Config/Services.php(450): CodeIgniter\Config\BaseService::getSharedInstance()
+11 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::responsecache()
+12 SYSTEMPATH/CodeIgniter.php(178): CodeIgniter\Config\BaseService::__callStatic()
+13 SYSTEMPATH/Config/Services.php(164): CodeIgniter\CodeIgniter->__construct()
+14 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::codeigniter()
+15 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+16 SYSTEMPATH/Config/Services.php(159): CodeIgniter\Config\BaseService::getSharedInstance()
+17 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::codeigniter()
+18 SYSTEMPATH/Config/BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+19 SYSTEMPATH/Common.php(995): CodeIgniter\Config\BaseService::get()
+20 SYSTEMPATH/Boot.php(349): service()
+21 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::initializeCodeIgniter()
+22 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 01:16:20 --> ErrorException: Undefined property: Config\Cache::$file
+[Method: GET, Route: /]
+in SYSTEMPATH/Cache/Handlers/FileHandler.php on line 59.
+ 1 SYSTEMPATH/Cache/Handlers/FileHandler.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Cache/CacheFactory.php(67): CodeIgniter\Cache\Handlers\FileHandler->__construct()
+ 3 SYSTEMPATH/Config/Services.php(129): CodeIgniter\Cache\CacheFactory::getHandler()
+ 4 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::cache()
+ 5 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(124): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::cache()
+ 8 SYSTEMPATH/Config/BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/Config/Services.php(454): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::responsecache()
+11 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+12 SYSTEMPATH/Config/Services.php(450): CodeIgniter\Config\BaseService::getSharedInstance()
+13 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::responsecache()
+14 SYSTEMPATH/CodeIgniter.php(178): CodeIgniter\Config\BaseService::__callStatic()
+15 SYSTEMPATH/Config/Services.php(164): CodeIgniter\CodeIgniter->__construct()
+16 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::codeigniter()
+17 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+18 SYSTEMPATH/Config/Services.php(159): CodeIgniter\Config\BaseService::getSharedInstance()
+19 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::codeigniter()
+20 SYSTEMPATH/Config/BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+21 SYSTEMPATH/Common.php(995): CodeIgniter\Config\BaseService::get()
+22 SYSTEMPATH/Boot.php(349): service()
+23 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::initializeCodeIgniter()
+24 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-08-06 01:16:26 --> ErrorException: Undefined property: Config\Cache::$file
+[Method: GET, Route: /]
+in SYSTEMPATH/Cache/Handlers/FileHandler.php on line 59.
+ 1 SYSTEMPATH/Cache/Handlers/FileHandler.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Cache/CacheFactory.php(67): CodeIgniter\Cache\Handlers\FileHandler->__construct()
+ 3 SYSTEMPATH/Config/Services.php(129): CodeIgniter\Cache\CacheFactory::getHandler()
+ 4 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::cache()
+ 5 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+ 6 SYSTEMPATH/Config/Services.php(124): CodeIgniter\Config\BaseService::getSharedInstance()
+ 7 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::cache()
+ 8 SYSTEMPATH/Config/BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+ 9 SYSTEMPATH/Config/Services.php(454): CodeIgniter\Config\BaseService::get()
+10 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::responsecache()
+11 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+12 SYSTEMPATH/Config/Services.php(450): CodeIgniter\Config\BaseService::getSharedInstance()
+13 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::responsecache()
+14 SYSTEMPATH/CodeIgniter.php(178): CodeIgniter\Config\BaseService::__callStatic()
+15 SYSTEMPATH/Config/Services.php(164): CodeIgniter\CodeIgniter->__construct()
+16 SYSTEMPATH/Config/BaseService.php(312): CodeIgniter\Config\Services::codeigniter()
+17 SYSTEMPATH/Config/BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic()
+18 SYSTEMPATH/Config/Services.php(159): CodeIgniter\Config\BaseService::getSharedInstance()
+19 SYSTEMPATH/Config/BaseService.php(321): CodeIgniter\Config\Services::codeigniter()
+20 SYSTEMPATH/Config/BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic()
+21 SYSTEMPATH/Common.php(995): CodeIgniter\Config\BaseService::get()
+22 SYSTEMPATH/Boot.php(349): service()
+23 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::initializeCodeIgniter()
+24 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 09:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:17:59 --> Attempting authentication for user: deachawat
+DEBUG - 2025-08-06 09:17:59 --> Starting authentication for user: deachawat
+DEBUG - 2025-08-06 09:17:59 --> LDAP authentication enabled, attempting LDAP authentication
+DEBUG - 2025-08-06 09:17:59 --> LDAP: Starting authentication for user: deachawat
+DEBUG - 2025-08-06 09:17:59 --> LDAP: Connecting to ldap://192.168.0.1:389
+WARNING - 2025-08-06 09:17:59 --> [DEPRECATED] Usage of ldap_connect with two arguments is deprecated in APPPATH/Services/LdapService.php on line 169.
+ 1 APPPATH/Services/LdapService.php(169): ldap_connect('ldap://192.168.0.1', 389)
+ 2 APPPATH/Services/LdapService.php(48): App\Services\LdapService->connect()
+ 3 APPPATH/Models/AuthModel.php(79): App\Services\LdapService->authenticate('deachawat', '1234')
+ 4 APPPATH/Controllers/Auth.php(76): App\Models\AuthModel->authenticateUser('deachawat', '1234')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->authenticate()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-06 09:17:59 --> LDAP: Successfully bound with service account
+DEBUG - 2025-08-06 09:17:59 --> LDAP: Successfully connected to Active Directory
+DEBUG - 2025-08-06 09:17:59 --> LDAP: Attempting to bind with DN: deachawat@NWFTH.com
+DEBUG - 2025-08-06 09:17:59 --> LDAP: Authentication failed - Invalid credentials
+DEBUG - 2025-08-06 09:17:59 --> LDAP: Disconnected from Active Directory
+DEBUG - 2025-08-06 09:17:59 --> LDAP authentication failed: Invalid username or password
+DEBUG - 2025-08-06 09:17:59 --> Falling back to local database authentication
+DEBUG - 2025-08-06 09:17:59 --> Attempting authentication for user: deachawat
+DEBUG - 2025-08-06 09:17:59 --> User query result: "User found"
+DEBUG - 2025-08-06 09:17:59 --> Password verification failed
+DEBUG - 2025-08-06 09:17:59 --> Authentication result: {"success":false,"message":"Invalid username or password"}
+DEBUG - 2025-08-06 09:17:59 --> Authentication failed: Invalid username or password
+WARNING - 2025-08-06 09:17:59 --> Failed login attempt for user deachawat from IP: 127.0.0.1
+DEBUG - 2025-08-06 09:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:18:44 --> Attempting authentication for user: admin
+DEBUG - 2025-08-06 09:18:44 --> Starting authentication for user: admin
+DEBUG - 2025-08-06 09:18:44 --> LDAP authentication enabled, attempting LDAP authentication
+DEBUG - 2025-08-06 09:18:44 --> LDAP: Starting authentication for user: admin
+DEBUG - 2025-08-06 09:18:44 --> LDAP: Connecting to ldap://192.168.0.1:389
+WARNING - 2025-08-06 09:18:44 --> [DEPRECATED] Usage of ldap_connect with two arguments is deprecated in APPPATH/Services/LdapService.php on line 169.
+ 1 APPPATH/Services/LdapService.php(169): ldap_connect('ldap://192.168.0.1', 389)
+ 2 APPPATH/Services/LdapService.php(48): App\Services\LdapService->connect()
+ 3 APPPATH/Models/AuthModel.php(79): App\Services\LdapService->authenticate('admin', '1234')
+ 4 APPPATH/Controllers/Auth.php(76): App\Models\AuthModel->authenticateUser('admin', '1234')
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Auth->authenticate()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-06 09:18:44 --> LDAP: Successfully bound with service account
+DEBUG - 2025-08-06 09:18:44 --> LDAP: Successfully connected to Active Directory
+DEBUG - 2025-08-06 09:18:44 --> LDAP: Attempting to bind with DN: admin@NWFTH.com
+DEBUG - 2025-08-06 09:18:44 --> LDAP: Authentication failed - Invalid credentials
+DEBUG - 2025-08-06 09:18:44 --> LDAP: Disconnected from Active Directory
+DEBUG - 2025-08-06 09:18:44 --> LDAP authentication failed: Invalid username or password
+DEBUG - 2025-08-06 09:18:44 --> Falling back to local database authentication
+DEBUG - 2025-08-06 09:18:44 --> Attempting authentication for user: admin
+DEBUG - 2025-08-06 09:18:44 --> User query result: "User found"
+DEBUG - 2025-08-06 09:18:44 --> Password verification failed
+DEBUG - 2025-08-06 09:18:44 --> Authentication result: {"success":false,"message":"Invalid username or password"}
+DEBUG - 2025-08-06 09:18:44 --> Authentication failed: Invalid username or password
+WARNING - 2025-08-06 09:18:44 --> Failed login attempt for user admin from IP: 127.0.0.1
+DEBUG - 2025-08-06 09:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:19:10 --> User action: home_index
+DEBUG - 2025-08-06 09:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:19:15 --> User action: index
+DEBUG - 2025-08-06 09:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:19:19 --> User action: ajaxlist
+INFO - 2025-08-06 09:19:19 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 09:19:22 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 09:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:19:28 --> User action: index
+DEBUG - 2025-08-06 09:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:19:32 --> User action: ajaxlist
+INFO - 2025-08-06 09:19:32 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:19:39 --> User action: home_index
+DEBUG - 2025-08-06 09:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:21:25 --> User action: index
+DEBUG - 2025-08-06 09:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:21:28 --> User action: ajaxlist
+INFO - 2025-08-06 09:21:28 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:21:38 --> User action: index
+DEBUG - 2025-08-06 09:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:21:44 --> User action: ajaxlist
+INFO - 2025-08-06 09:21:44 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:21:53 --> User action: index
+DEBUG - 2025-08-06 09:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:21:55 --> User action: index
+DEBUG - 2025-08-06 09:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:22:00 --> User action: ajaxlist
+INFO - 2025-08-06 09:22:00 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:22:00 --> User action: ajaxlist
+INFO - 2025-08-06 09:22:00 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:22:04 --> User action: index
+DEBUG - 2025-08-06 09:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:22:08 --> User action: ajaxlist
+INFO - 2025-08-06 09:22:08 --> App\Models\CreateRunPartialModel - getPartialRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: Found FG item TB317-01 - Battermix for RunNo 215235
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: FG Qty set to standard batch size: 1010
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: Found 14 raw ingredients from TFCPILOT3 (primary read)
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: Grouped ingredients by LineId - 7 groups found
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: LineId 2 - Representative: INSOYF01, Total Qty: 505, Total Bulk: 24
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: LineId 3 - Representative: INSALT02, Total Qty: 161.6, Total Bulk: 6
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: LineId 4 - Representative: INGUAR01, Total Qty: 20.2, Total Bulk: 0
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: LineId 5 - Representative: INXANT01, Total Qty: 16.16, Total Bulk: 0
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: LineId 6 - Representative: INSBIC01, Total Qty: 6.06, Total Bulk: 0
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: LineId 7 - Representative: INSAPP01, Total Qty: 8.08, Total Bulk: 0
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: LineId 8 - Representative: INMSGT01, Total Qty: 40.4, Total Bulk: 0
+INFO - 2025-08-06 09:22:24 --> CreateRunBulk: Found 7 consolidated ingredients for RunNo 215235
+DEBUG - 2025-08-06 09:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:23:58 --> User action: home_index
+DEBUG - 2025-08-06 09:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:24:08 --> User action: index
+DEBUG - 2025-08-06 09:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:24:12 --> User action: ajaxlist
+INFO - 2025-08-06 09:24:12 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:24:18 --> User action: ajaxlist
+INFO - 2025-08-06 09:24:18 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":10,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-06 09:24:19 --> User action: ajaxlist
+INFO - 2025-08-06 09:24:19 --> App\Models\CreateRunBulkModel - getBulkRuns: {"limit":25,"offset":0,"search":""}
+DEBUG - 2025-08-06 09:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:30:36 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "${jndi:dns:"
+[Method: GET, Route: struts2-showcase/$%7Bjndi:dns:/MDEDiscovery5f20d6cb39ApacheStruts2-8080%7D]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:30:36 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "${jndi:dns:"
+[Method: GET, Route: struts2-showcase/$%7Bjndi:dns:/MDEDiscovery5f20d6cb39ApacheStruts2-8081%7D]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/deachawat/dev/projects/BPP/webserver/htdocs/bme4/public/index.php')
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:30:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "${jndi:dns:"
+[Method: GET, Route: api/v2/$%7Bjndi:dns:/MDEDiscovery5f20d6cb39SeenInTheWildGet-8080%7D]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:30:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "${jndi:dns:"
+[Method: GET, Route: api/v2/$%7Bjndi:dns:/MDEDiscovery5f20d6cb39SeenInTheWildGet-8081%7D]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/deachawat/dev/projects/BPP/webserver/htdocs/bme4/public/index.php')
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:30:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "${jndi:dns:"
+[Method: GET, Route: JSPWiki/wiki/$%7Bjndi:dns:/MDEDiscovery5f20d6cb39ApacheJspWiki-8080%7D]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(47): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-08-06 09:30:37 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "${jndi:dns:"
+[Method: GET, Route: JSPWiki/wiki/$%7Bjndi:dns:/MDEDiscovery5f20d6cb39ApacheJspWiki-8081%7D]
+in SYSTEMPATH/Router/Router.php on line 741.
+ 1 SYSTEMPATH/Router/Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars()
+ 2 SYSTEMPATH/CodeIgniter.php(832): CodeIgniter\Router\Router->handle()
+ 3 SYSTEMPATH/CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/home/deachawat/dev/projects/BPP/webserver/htdocs/bme4/public/index.php')
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-06 09:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

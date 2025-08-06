@@ -1,0 +1,31 @@
+<Root>
+  <local_uname>superadmin</local_uname>
+  <local_pword>bsJRuH4SJoCKEM1MJJ7dGr1cPSLsPEkeTcREB+Elnmw=</local_pword>
+  <bme_server>192.168.1.37</bme_server>
+  <bme_uname>sa</bme_uname>
+  <bme_pword>bsJRuH4SJoCKEM1MJJ7dGr1cPSLsPEkeTcREB+Elnmw=</bme_pword>
+  <bme_database>NWFTH</bme_database>
+  <pc_id>ID</pc_id>
+  <nwf_printer>\\?\usb#vid_0a5f&amp;pid_0185#d6j225007640#{28d78fad-5a12-11d1-ae5b-0000f803a8c2}</nwf_printer>
+  <comport>COM1</comport>
+  <scale1_interval>100</scale1_interval>
+  <scale1_parity>0</scale1_parity>
+  <scale1_baudrate>9600</scale1_baudrate>
+  <scale1_databits>8</scale1_databits>
+  <scale1_stopbits>1</scale1_stopbits>
+  <scale1_conversion>100000000</scale1_conversion>
+  <comport2>COM2</comport2>
+  <scale2_interval>10000</scale2_interval>
+  <scale2_parity>0</scale2_parity>
+  <scale2_baudrate>9600</scale2_baudrate>
+  <scale2_databits>8</scale2_databits>
+  <scale2_stopbits>1</scale2_stopbits>
+  <scale2_conversion>1000</scale2_conversion>
+  <nwf_server>192.168.1.38</nwf_server>
+  <nwf_type>MYSQL</nwf_type>
+  <nwf_uname>nwfp</nwf_uname>
+  <nwf_pword>f5GKGTQCNP0DK/iMzCVKICb7Fdgokv4268bOp3ku89g=</nwf_pword>
+  <nwf_port>3306</nwf_port>
+  <nwf_database>bme_db</nwf_database>
+  <computername>NWFP-L0007</computername>
+</Root>

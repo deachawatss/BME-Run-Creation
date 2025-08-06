@@ -1,0 +1,58 @@
+<style>
+  .trdone{
+    background-color: darkseagreen;
+  }
+</style>
+<ion-content [fullscreen]="true">
+  
+  <ion-header>
+    <ion-toolbar class="ion-text-center">
+      <ion-title >INVENTORY VERIFY</ion-title>
+      <ion-buttons slot="start">
+        <ion-button size="large" outline="fill" color="danger"  (click)="btnBack()"><ion-icon name="backspace-outline"></ion-icon>Back</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>Location</ion-label>
+    <ion-text slot="end">MAIN</ion-text>
+  </ion-item>
+
+  <ion-list class="search">
+    <ion-item>
+      <ion-label >Bin No</ion-label>
+      <ion-input type="text" placeholder="Scan Bin" [(ngModel)]="this.search_bin"  class="ion-text-right"  (keypress)="tfind($event.keyCode)" clearOnEdit="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Item</ion-label>
+      <ion-input type="text" placeholder="Scan Item Barcode" [(ngModel)]="this.search_barcode" class="ion-text-right" (keypress)="tfind($event.keyCode)" clearOnEdit="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Qty Counted</ion-label>
+      <ion-input type="number" placeholder="Enter quantity" [(ngModel)]="this.qty" class="ion-text-right " ></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list class="info">
+    <ion-item>
+      <ion-label>Item Key:</ion-label>
+      <ion-text slot="end">{{this.ItemKey}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description:</ion-label>
+      <ion-input type="text" [(ngModel)]="this.Desc1" class="ion-text-right " ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lot No:</ion-label>
+      <ion-text slot="end">{{this.LotNo}}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="btnSave()">SAVE</ion-button>
+</ion-content>

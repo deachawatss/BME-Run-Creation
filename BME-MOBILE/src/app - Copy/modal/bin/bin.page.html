@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>BIN LIST</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar (ionChange)="handleChange($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list >
+    <ion-item *ngFor="let p of results; let i = index" (click)="btnSelect(i)">
+      <ion-label>
+        <h2><b>BIN No:</b>{{p.BinNo}}</h2>
+        <p>Description : {{p.Description}} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
