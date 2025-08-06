@@ -1,0 +1,51 @@
+
+/*footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+}
+
+#topmenu{
+    background-color: #20c997!important;
+}
+
+.flex-column {
+    
+    /*padding: 10px;
+    box-shadow: 2px 2px 2px 2px #cfcece;
+    
+  }
+
+  .auto-data_wrapper {
+    background-color: white!important;
+  }
+
+  /* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../webfonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+/*end footer*/

@@ -1,0 +1,707 @@
+/**
+ * Enhanced Table Styling for BME Create Run Bulk
+ * Following Nielsen Norman Group, USWDS, and Material Design guidelines
+ * 
+ * Features:
+ * - Sticky headers with context preservation
+ * - WCAG 2.2 AA accessibility compliance
+ * - Enhanced typography for data scanning
+ * - Responsive design with mobile optimization
+ * - Micro-interactions and subtle animations
+ */
+
+/* ==========================================================================
+   Table Container & Structure
+   ========================================================================== */
+
+.enhanced-table-container {
+  position: relative;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-primary);
+}
+
+.enhanced-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--color-background-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+/* ==========================================================================
+   Sticky Header Implementation (USWDS Guidelines)
+   ========================================================================== */
+
+.enhanced-table thead {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+  background: var(--color-brown-600);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+}
+
+.enhanced-table thead th {
+  background: inherit;
+  padding: var(--spacing-lg) var(--spacing-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  color: white;
+  text-align: left;
+  border-bottom: var(--border-width-medium) solid var(--color-brown-700);
+  border-right: 1px solid var(--color-brown-700);
+  white-space: nowrap;
+  user-select: none;
+  transition: all var(--transition-fast);
+}
+
+.enhanced-table thead th:last-child {
+  border-right: none;
+}
+
+.enhanced-table thead th:hover {
+  background: var(--color-brown-700);
+  color: white;
+}
+
+/* Optional Sticky First Column */
+.enhanced-table.sticky-first-column th:first-child,
+.enhanced-table.sticky-first-column td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: var(--z-index-sticky);
+  background: var(--color-background-primary);
+  border-right: 2px solid var(--color-brown-200);
+}
+
+.enhanced-table.sticky-first-column thead th:first-child {
+  z-index: calc(var(--z-index-sticky) + 1);
+  background: var(--color-brown-600);
+}
+
+/* ==========================================================================
+   Sort Indicators & Interactive Headers
+   ========================================================================== */
+
+.enhanced-table th.sortable {
+  cursor: pointer;
+  position: relative;
+  padding-right: var(--spacing-md);
+}
+
+.enhanced-table th.sortable::after {
+  content: '';
+  display: none;
+}
+
+.enhanced-table th.sortable:hover::after {
+  display: none;
+}
+
+.enhanced-table th.sortable.sorting-asc::after {
+  content: '';
+  display: none;
+}
+
+.enhanced-table th.sortable.sorting-desc::after {
+  content: '';
+  display: none;
+}
+
+/* ==========================================================================
+   Enhanced Typography for Data Scanning
+   ========================================================================== */
+
+.enhanced-table tbody td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-primary);
+  border-right: 1px solid var(--color-border-muted);
+  vertical-align: middle;
+  transition: all var(--transition-fast);
+}
+
+.enhanced-table tbody td:last-child {
+  border-right: none;
+}
+
+/* Monospace for identifiers (better scannability) */
+.enhanced-table .id-field {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Consolas', monospace;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: #000000 !important; /* Force black text regardless of theme */
+  background: var(--color-brown-25);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-brown-100);
+}
+
+/* Right-align numbers for comparison */
+.enhanced-table .number-field {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--font-weight-medium);
+  color: #000000 !important; /* Force black text regardless of theme */
+}
+
+/* Enhanced status chips */
+.enhanced-table .status-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  min-width: var(--spacing-5xl); /* 48px + padding */
+  justify-content: center;
+  border: 1px solid transparent;
+}
+
+.enhanced-table .status-chip.status-new,
+.enhanced-table .status-chip.status-active {
+  background: var(--color-success-100);
+  color: var(--color-success-800);
+  border-color: var(--color-success-200);
+}
+
+.enhanced-table .status-chip.status-print,
+.enhanced-table .status-chip.status-running {
+  background: var(--color-info-100);
+  color: var(--color-info-800);
+  border-color: var(--color-info-200);
+}
+
+.enhanced-table .status-chip.status-completed {
+  background: var(--color-brown-100);
+  color: var(--color-text-primary);
+  border-color: var(--color-brown-200);
+}
+
+.enhanced-table .status-chip.status-error,
+.enhanced-table .status-chip.status-failed {
+  background: var(--color-danger-100);
+  color: var(--color-danger-800);
+  border-color: var(--color-danger-200);
+}
+
+.enhanced-table .status-chip.status-pending {
+  background: var(--color-warning-100);
+  color: var(--color-warning-800);
+  border-color: var(--color-warning-200);
+}
+
+/* ==========================================================================
+   Row Interactions & States
+   ========================================================================== */
+
+.enhanced-table tbody tr {
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.enhanced-table tbody tr:hover {
+  background: var(--color-brown-25);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(93, 64, 55, 0.06);
+}
+
+.enhanced-table tbody tr:hover td {
+  border-color: var(--color-brown-100);
+}
+
+.enhanced-table tbody tr.selected {
+  background: var(--color-brown-50);
+  border-left: var(--border-width-thick) solid var(--color-brown-600);
+}
+
+.enhanced-table tbody tr.expanded {
+  background: var(--color-brown-25);
+}
+
+/* ==========================================================================
+   Action Buttons & Inline Controls
+   ========================================================================== */
+
+.enhanced-table .action-group {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+  justify-content: center;
+}
+
+.enhanced-table .action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-button-sm);
+  height: var(--size-button-sm);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-secondary);
+  background: var(--color-background-primary);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+}
+
+.enhanced-table .action-btn:hover {
+  background: var(--color-brown-50);
+  border-color: var(--color-brown-300);
+  color: var(--color-text-primary);
+  transform: translateY(-1px);
+}
+
+.enhanced-table .action-btn.btn-view {
+  color: var(--color-info-600);
+  border-color: var(--color-info-200);
+}
+
+.enhanced-table .action-btn.btn-view:hover {
+  background: var(--color-info-50);
+  color: var(--color-info-700);
+}
+
+.enhanced-table .action-btn.btn-edit {
+  color: var(--color-text-primary);
+  border-color: var(--color-brown-200);
+}
+
+.enhanced-table .action-btn.btn-edit:hover {
+  background: var(--color-brown-50);
+  color: var(--color-text-primary);
+}
+
+.enhanced-table .action-btn.btn-delete {
+  color: var(--color-danger-600);
+  border-color: var(--color-danger-200);
+}
+
+.enhanced-table .action-btn.btn-delete:hover {
+  background: var(--color-danger-50);
+  color: var(--color-danger-700);
+}
+
+/* Kebab menu for consolidated actions */
+.enhanced-table .action-menu {
+  position: relative;
+}
+
+.enhanced-table .action-menu-btn {
+  width: var(--size-button-sm);
+  height: var(--size-button-sm);
+  border: 1px solid var(--color-border-secondary);
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.enhanced-table .action-menu-btn:hover {
+  background: var(--color-brown-50);
+  border-color: var(--color-brown-300);
+}
+
+.enhanced-table .action-menu-btn::before {
+  content: '⋯';
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+/* ==========================================================================
+   Inline Expansion Rows
+   ========================================================================== */
+
+.enhanced-table .expansion-row {
+  background: var(--color-brown-25);
+  border-bottom: 1px solid var(--color-brown-100);
+}
+
+.enhanced-table .expansion-row td {
+  padding: var(--spacing-lg);
+  border-right: none;
+}
+
+.enhanced-table .expansion-content {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-brown-100);
+}
+
+.enhanced-table .expansion-header {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.enhanced-table .expansion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.enhanced-table .expansion-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.enhanced-table .expansion-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.enhanced-table .expansion-value {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   Bulk Selection & Multi-select
+   ========================================================================== */
+
+.enhanced-table .bulk-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid var(--color-border-secondary);
+  background: var(--color-background-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.enhanced-table .bulk-checkbox:checked {
+  background: var(--color-brown-600);
+  border-color: var(--color-brown-600);
+}
+
+.enhanced-table .bulk-checkbox:hover {
+  border-color: var(--color-brown-400);
+}
+
+.enhanced-table .bulk-actions {
+  background: var(--color-brown-50);
+  border-bottom: 1px solid var(--color-brown-200);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: none;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.enhanced-table .bulk-actions.active {
+  display: flex;
+}
+
+.enhanced-table .bulk-actions-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ==========================================================================
+   Loading & Empty States
+   ========================================================================== */
+
+.enhanced-table .loading-row {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.enhanced-table .skeleton-cell {
+  background: linear-gradient(90deg, var(--color-gray-100) 25%, var(--color-gray-50) 50%, var(--color-gray-100) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--border-radius-sm);
+  height: 16px;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.enhanced-table .empty-state {
+  text-align: center;
+  padding: var(--spacing-5xl);
+  color: var(--color-text-muted);
+}
+
+.enhanced-table .empty-state-icon {
+  font-size: 48px;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.enhanced-table .empty-state-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.enhanced-table .empty-state-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Responsive Design & Mobile Optimization
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .enhanced-table-container {
+    border-radius: var(--border-radius-lg);
+    margin: 0 calc(-1 * var(--spacing-md));
+  }
+  
+  .enhanced-table thead th {
+    padding: var(--spacing-sm) var(--spacing-xs);
+    font-size: var(--font-size-xs);
+  }
+  
+  .enhanced-table tbody td {
+    padding: var(--spacing-sm) var(--spacing-xs);
+    font-size: var(--font-size-xs);
+  }
+  
+  .enhanced-table .id-field {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+  
+  .enhanced-table .status-chip {
+    font-size: 10px;
+    padding: var(--spacing-xs);
+    min-width: 50px;
+  }
+  
+  .enhanced-table .action-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+}
+
+/* Column visibility controls */
+.enhanced-table.hide-column-1 th:nth-child(1),
+.enhanced-table.hide-column-1 td:nth-child(1) { display: none; }
+.enhanced-table.hide-column-2 th:nth-child(2),
+.enhanced-table.hide-column-2 td:nth-child(2) { display: none; }
+.enhanced-table.hide-column-3 th:nth-child(3),
+.enhanced-table.hide-column-3 td:nth-child(3) { display: none; }
+.enhanced-table.hide-column-4 th:nth-child(4),
+.enhanced-table.hide-column-4 td:nth-child(4) { display: none; }
+.enhanced-table.hide-column-5 th:nth-child(5),
+.enhanced-table.hide-column-5 td:nth-child(5) { display: none; }
+.enhanced-table.hide-column-6 th:nth-child(6),
+.enhanced-table.hide-column-6 td:nth-child(6) { display: none; }
+.enhanced-table.hide-column-7 th:nth-child(7),
+.enhanced-table.hide-column-7 td:nth-child(7) { display: none; }
+.enhanced-table.hide-column-8 th:nth-child(8),
+.enhanced-table.hide-column-8 td:nth-child(8) { display: none; }
+
+/* ==========================================================================
+   Semantic Layout Classes for Page Structure
+   ========================================================================== */
+
+/* Page header styles */
+.page-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.page-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+  margin: 0;
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin: var(--spacing-sm) 0 0 0;
+  font-size: var(--font-size-sm);
+}
+
+.page-back-link {
+  color: white;
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.page-back-link:hover {
+  color: var(--color-brown-100);
+  text-decoration: none;
+}
+
+/* Batch search section styles */
+.batch-search-divider {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.batch-search-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-lg);
+}
+
+.batch-search-container {
+  border-radius: var(--border-radius-xl);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* DataTable responsive detail styles */
+.dt-detail-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-700);
+}
+
+.dt-detail-value {
+  color: var(--color-gray-900);
+}
+
+/* Enhanced formula description display */
+.formula-description {
+  font-size: var(--font-size-sm);
+}
+
+.formula-description-truncated {
+  font-size: var(--font-size-sm);
+}
+
+/* Date display styles */
+.date-display {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tight);
+  text-align: center;
+}
+
+.date-display-main {
+  font-weight: var(--font-weight-medium);
+}
+
+.date-display-time {
+  color: var(--color-gray-500);
+}
+
+.date-display-empty {
+  color: var(--color-gray-400);
+}
+
+/* Batch search table date styles */
+.batch-date-display {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tight);
+  text-align: center;
+}
+
+.batch-date-main {
+  font-weight: var(--font-weight-medium);
+}
+
+.batch-date-time {
+  color: var(--color-gray-500);
+}
+
+/* Utility classes for spacing */
+.mt-spacing-6 {
+  margin-top: var(--spacing-2xl); /* 24px, equivalent to --space-6 */
+}
+
+.pt-spacing-4 {
+  padding-top: var(--spacing-lg);
+}
+
+.mt-spacing-4 {
+  margin-top: var(--spacing-lg);
+}
+
+.mb-spacing-4 {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   Accessibility Enhancements (WCAG 2.2 AA)
+   ========================================================================== */
+
+.enhanced-table th,
+.enhanced-table td {
+  /* Ensure minimum 24x24px touch targets */
+  min-height: 24px;
+}
+
+.enhanced-table .action-btn,
+.enhanced-table .bulk-checkbox {
+  /* WCAG 2.2 Target Size (Minimum) - 24x24px */
+  min-width: 24px;
+  min-height: 24px;
+}
+
+/* Focus indicators */
+.enhanced-table th:focus,
+.enhanced-table .action-btn:focus,
+.enhanced-table .bulk-checkbox:focus {
+  outline: 2px solid var(--color-brown-600);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .enhanced-table {
+    border: 2px solid;
+  }
+  
+  .enhanced-table th,
+  .enhanced-table td {
+    border-width: 2px;
+  }
+  
+  .enhanced-table .status-chip {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .enhanced-table *,
+  .enhanced-table *::before,
+  .enhanced-table *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
