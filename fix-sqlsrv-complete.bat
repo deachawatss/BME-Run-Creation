@@ -35,7 +35,7 @@ echo Please download and install from:
 echo https://aka.ms/vs/17/release/vc_redist.x64.exe
 echo.
 echo Press any key after installing Visual C++ Redistributable...
-pause
+pause >nul
 
 echo.
 echo Installing Microsoft ODBC Driver 18 for SQL Server...
@@ -43,7 +43,7 @@ echo Please download and install from:
 echo https://go.microsoft.com/fwlink/?linkid=2187214
 echo.
 echo Press any key after installing ODBC Driver...
-pause
+pause >nul
 
 echo.
 echo Step 3: Download correct SQLSRV extensions
@@ -82,7 +82,7 @@ powershell -Command "& {
 
 echo.
 echo Press any key to continue after download completes...
-pause
+pause >nul
 
 echo.
 echo Step 4: Verify extension files exist
@@ -159,7 +159,7 @@ echo Testing PHP syntax...
 C:\php\php.exe -t
 if %ERRORLEVEL% neq 0 (
     echo ❌ PHP configuration has errors
-    pause
+    pause >nul
     exit /b 1
 )
 
@@ -205,4 +205,5 @@ echo =====================================
 echo.
 echo Now test BME4 at: http://192.168.0.21/
 echo.
-pause
+echo Press any key to exit...
+pause >nul
