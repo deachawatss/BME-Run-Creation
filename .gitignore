@@ -1,0 +1,68 @@
+# Apache Log Files
+Apache2/logs/*.log
+Apache2/logs/*.pid
+Apache2/logs/install.log
+
+# Apache Binary Files (too large for Git)
+Apache2/bin/
+Apache2/modules/
+Apache2/lib/
+
+# Apache Icon Files (large collection)
+Apache2/icons/
+
+# Temporary and Cache Files
+*.tmp
+*.cache
+*.temp
+*~
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment Files
+.env
+.env.local
+.env.production
+
+# Build Output
+build/
+dist/
+target/
+
+# Dependency Directories
+node_modules/
+vendor/
+
+# PHP Specific
+composer.phar
+/vendor
+composer.lock
+
+# Database Files
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Configuration Files with Sensitive Data
+config/database.php
+config/secrets.php
