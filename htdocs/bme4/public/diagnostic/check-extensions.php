@@ -21,62 +21,62 @@
 </head>
 <body>
     <div class="container">
-        <h1>🔍 SQLSRV Extension Diagnostic</h1>
+        <h1>SQLSRV Extension Diagnostic</h1>
         <p><strong>Server:</strong> <?php echo $_SERVER['HTTP_HOST']; ?> | <strong>Time:</strong> <?php echo date('Y-m-d H:i:s'); ?></p>
 
         <!-- PHP System Information -->
         <div class="section">
-            <h2>📊 PHP System Information</h2>
+            <h2>PHP System Information</h2>
             <table>
                 <tr><th>Property</th><th>Value</th><th>Expected</th><th>Status</th></tr>
                 <tr>
                     <td>PHP Version</td>
                     <td><?php echo PHP_VERSION; ?></td>
                     <td>8.3.24</td>
-                    <td><?php echo version_compare(PHP_VERSION, '8.3.0', '>=') ? '✅' : '❌'; ?></td>
+                    <td><?php echo version_compare(PHP_VERSION, '8.3.0', '>=') ? 'OK' : 'ERROR'; ?></td>
                 </tr>
                 <tr>
                     <td>Architecture</td>
                     <td><?php echo php_uname('m'); ?> (<?php echo PHP_INT_SIZE * 8; ?>-bit)</td>
                     <td>x64 (64-bit)</td>
-                    <td><?php echo PHP_INT_SIZE === 8 ? '✅' : '❌'; ?></td>
+                    <td><?php echo PHP_INT_SIZE === 8 ? 'OK' : 'ERROR'; ?></td>
                 </tr>
                 <tr>
                     <td>Thread Safety</td>
                     <td><?php echo ZEND_THREAD_SAFE ? 'Thread Safe' : 'Non-Thread Safe'; ?></td>
                     <td>Thread Safe</td>
-                    <td><?php echo ZEND_THREAD_SAFE ? '✅' : '❌'; ?></td>
+                    <td><?php echo ZEND_THREAD_SAFE ? 'OK' : 'ERROR'; ?></td>
                 </tr>
                 <tr>
                     <td>PHP SAPI</td>
                     <td><?php echo php_sapi_name(); ?></td>
                     <td>apache2handler</td>
-                    <td><?php echo php_sapi_name() === 'apache2handler' ? '✅' : '⚠️'; ?></td>
+                    <td><?php echo php_sapi_name() === 'apache2handler' ? 'OK' : 'WARNING'; ?></td>
                 </tr>
                 <tr>
                     <td>Extension Directory</td>
                     <td><?php echo ini_get('extension_dir'); ?></td>
                     <td>ext</td>
-                    <td>ℹ️</td>
+                    <td>INFO</td>
                 </tr>
             </table>
         </div>
 
         <!-- Extension Status -->
         <div class="section">
-            <h2>🔌 Extension Loading Status</h2>
+            <h2>Extension Loading Status</h2>
             <table>
                 <tr><th>Extension</th><th>Status</th><th>Function Test</th><th>Details</th></tr>
                 <tr>
                     <td>SQLSRV</td>
-                    <td><?php echo extension_loaded('sqlsrv') ? '✅ Loaded' : '❌ Not Loaded'; ?></td>
-                    <td><?php echo function_exists('sqlsrv_configure') ? '✅ Available' : '❌ Missing'; ?></td>
+                    <td><?php echo extension_loaded('sqlsrv') ? 'LOADED' : 'NOT LOADED'; ?></td>
+                    <td><?php echo function_exists('sqlsrv_configure') ? 'AVAILABLE' : 'MISSING'; ?></td>
                     <td><?php echo extension_loaded('sqlsrv') ? 'Core functions available' : 'Extension not found'; ?></td>
                 </tr>
                 <tr>
                     <td>PDO_SQLSRV</td>
-                    <td><?php echo extension_loaded('pdo_sqlsrv') ? '✅ Loaded' : '❌ Not Loaded'; ?></td>
-                    <td><?php echo class_exists('PDO') && in_array('sqlsrv', PDO::getAvailableDrivers()) ? '✅ Available' : '❌ Missing'; ?></td>
+                    <td><?php echo extension_loaded('pdo_sqlsrv') ? 'LOADED' : 'NOT LOADED'; ?></td>
+                    <td><?php echo class_exists('PDO') && in_array('sqlsrv', PDO::getAvailableDrivers()) ? 'AVAILABLE' : 'MISSING'; ?></td>
                     <td><?php echo in_array('sqlsrv', PDO::getAvailableDrivers() ?? []) ? 'PDO driver registered' : 'PDO driver not found'; ?></td>
                 </tr>
             </table>
@@ -84,7 +84,7 @@
 
         <!-- All Loaded Extensions -->
         <div class="section">
-            <h2>📦 Currently Loaded Extensions</h2>
+            <h2>Currently Loaded Extensions</h2>
             <div style="column-count: 3; column-gap: 20px;">
                 <?php
                 $extensions = get_loaded_extensions();
@@ -100,18 +100,18 @@
 
         <!-- PDO Drivers -->
         <div class="section">
-            <h2>🗄️ Available PDO Drivers</h2>
+            <h2>Available PDO Drivers</h2>
             <?php if (class_exists('PDO')): ?>
                 <pre><?php print_r(PDO::getAvailableDrivers()); ?></pre>
-                <p><strong>SQLSRV Driver:</strong> <?php echo in_array('sqlsrv', PDO::getAvailableDrivers()) ? '✅ Available' : '❌ Not Found'; ?></p>
+                <p><strong>SQLSRV Driver:</strong> <?php echo in_array('sqlsrv', PDO::getAvailableDrivers()) ? 'AVAILABLE' : 'NOT FOUND'; ?></p>
             <?php else: ?>
-                <p class="error">❌ PDO class not available</p>
+                <p class="error">ERROR: PDO class not available</p>
             <?php endif; ?>
         </div>
 
         <!-- Configuration Check -->
         <div class="section">
-            <h2>⚙️ PHP Configuration</h2>
+            <h2>PHP Configuration</h2>
             <table>
                 <tr><th>Setting</th><th>Value</th></tr>
                 <tr><td>extension_dir</td><td><?php echo ini_get('extension_dir'); ?></td></tr>
@@ -124,24 +124,24 @@
 
         <!-- Diagnostic Summary -->
         <div class="section <?php echo (extension_loaded('sqlsrv') && extension_loaded('pdo_sqlsrv')) ? 'success' : 'error'; ?>">
-            <h2>📋 Diagnostic Summary</h2>
+            <h2>Diagnostic Summary</h2>
             <?php if (extension_loaded('sqlsrv') && extension_loaded('pdo_sqlsrv')): ?>
-                <h3>✅ SUCCESS: SQLSRV Extensions Working!</h3>
+                <h3>SUCCESS: SQLSRV Extensions Working!</h3>
                 <p>Both SQLSRV and PDO_SQLSRV extensions are loaded and functional.</p>
-                <a href="../" class="btn">🎯 Test BME4 Application</a>
+                <a href="../" class="btn">Test BME4 Application</a>
             <?php else: ?>
-                <h3>❌ ISSUE: SQLSRV Extensions Not Loading</h3>
+                <h3>ISSUE: SQLSRV Extensions Not Loading</h3>
                 <p><strong>Possible Causes:</strong></p>
                 <ul>
                     <?php if (!ZEND_THREAD_SAFE): ?>
-                        <li>❌ PHP is Non-Thread Safe but extensions require Thread Safe</li>
+                        <li>ERROR: PHP is Non-Thread Safe but extensions require Thread Safe</li>
                     <?php endif; ?>
                     <?php if (PHP_INT_SIZE !== 8): ?>
-                        <li>❌ PHP is 32-bit but extensions are 64-bit</li>
+                        <li>ERROR: PHP is 32-bit but extensions are 64-bit</li>
                     <?php endif; ?>
-                    <li>⚠️ Extension files may be incompatible with PHP version</li>
-                    <li>⚠️ Missing Visual C++ Redistributable or ODBC Driver</li>
-                    <li>⚠️ DLL dependency issues</li>
+                    <li>WARNING: Extension files may be incompatible with PHP version</li>
+                    <li>WARNING: Missing Visual C++ Redistributable or ODBC Driver</li>
+                    <li>WARNING: DLL dependency issues</li>
                 </ul>
                 
                 <p><strong>Recommended Fixes:</strong></p>
@@ -155,16 +155,16 @@
                 <p><strong>MySQL Fallback (if SQLSRV won't work):</strong></p>
                 <pre>copy .env.mysql-ready .env</pre>
                 
-                <a href="check-extensions.php" class="btn">🔄 Refresh Check</a>
+                <a href="check-extensions.php" class="btn">Refresh Check</a>
             <?php endif; ?>
         </div>
 
         <!-- Quick Links -->
         <div class="section">
-            <h2>🚀 Quick Links</h2>
-            <a href="../" class="btn">🏠 BME4 Home</a>
-            <a href="../../../" class="btn">🌐 Server Root</a>
-            <a href="phpinfo.php" class="btn">📊 PHP Info</a>
+            <h2>Quick Links</h2>
+            <a href="../" class="btn">BME4 Home</a>
+            <a href="../../../" class="btn">Server Root</a>
+            <a href="phpinfo.php" class="btn">PHP Info</a>
         </div>
     </div>
 </body>
