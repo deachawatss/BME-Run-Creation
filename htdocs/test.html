@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apache Test - Document Root Verification</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f8ff; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .success { color: #28a745; font-size: 24px; text-align: center; margin: 20px 0; }
+        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; margin: 5px; }
+        .btn:hover { background: #0056b3; }
+        .info { background: #d1ecf1; padding: 15px; border-radius: 5px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success">✅ SUCCESS</div>
+        <h1>Apache is Working!</h1>
+        
+        <div class="info">
+            <p><strong>This confirms:</strong></p>
+            <ul>
+                <li>Apache is running and serving files</li>
+                <li>DocumentRoot is correctly set to: <code>C:\webserver\htdocs</code></li>
+                <li>Files can be accessed via: <code>http://192.168.0.21/</code></li>
+            </ul>
+        </div>
+
+        <h2>🔧 Diagnostic Tools</h2>
+        <p>Now try accessing the SQLSRV diagnostic tools:</p>
+        
+        <a href="check-extensions.php" class="btn">🔍 SQLSRV Extension Check</a>
+        <a href="fix-sqlsrv.html" class="btn">🛠️ SQLSRV Fix Guide</a>
+        <a href="phpinfo.php" class="btn">📊 PHP Info</a>
+        
+        <h2>📱 Alternative Access</h2>
+        <p>If the above links still give 404 errors, try these alternative paths:</p>
+        
+        <a href="bme4/public/check-extensions.php" class="btn">🔍 Via BME4 Directory</a>
+        <a href="bme4/public/phpinfo.php" class="btn">📊 PHP Info (BME4)</a>
+        
+        <div class="info">
+            <h3>💡 What to do if you see 404 errors:</h3>
+            <ol>
+                <li>Check if the files exist in the right location</li>
+                <li>Verify Apache virtual host configuration</li>
+                <li>Check file permissions</li>
+                <li>Review Apache error logs</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

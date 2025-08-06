@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BME4 System Diagnostics</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f0f8ff; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 15px 25px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; margin: 10px; font-size: 16px; }
+        .btn:hover { background: #0056b3; }
+        .btn-success { background: #28a745; }
+        .btn-warning { background: #ffc107; color: #212529; }
+        .btn-info { background: #17a2b8; }
+        .section { margin: 25px 0; padding: 20px; border-left: 4px solid #007bff; background: #f8f9fa; }
+        .success { border-left-color: #28a745; background: #d4edda; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 BME4 System Diagnostics</h1>
+            <p>Complete diagnostic tools for BME4 PHP and SQLSRV setup</p>
+        </div>
+
+        <div class="section success">
+            <h2>✅ Git-Tracked Diagnostics</h2>
+            <p>These diagnostic tools are now part of the repository and will persist after <code>git pull origin main</code></p>
+        </div>
+
+        <div class="section">
+            <h2>🔍 Main Diagnostic Tools</h2>
+            
+            <a href="check-extensions.php" class="btn btn-success">
+                🔍 SQLSRV Extension Check
+            </a>
+            <p>Comprehensive SQLSRV extension diagnostic - checks PHP version, architecture, extension loading, and provides troubleshooting steps.</p>
+
+            <a href="phpinfo.php" class="btn btn-info">
+                📊 PHP Information
+            </a>
+            <p>Complete PHP configuration information including all extensions and settings.</p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 BME4 Application</h2>
+            
+            <a href="../" class="btn">
+                🏠 BME4 Home
+            </a>
+            <p>Return to the main BME4 application dashboard.</p>
+
+            <a href="../CreateRunBulk" class="btn">
+                📦 Create Bulk Run
+            </a>
+            <p>Production-ready bulk run creation system.</p>
+
+            <a href="../CreateRunPartial" class="btn">
+                📋 Create Partial Run
+            </a>
+            <p>Production-ready partial run creation system.</p>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Quick Fixes</h2>
+            
+            <div style="background: #2d3748; color: #e2e8f0; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace;">
+                <strong>Restart Apache:</strong><br>
+                C:\webserver\Apache2\bin\httpd.exe -k stop<br>
+                timeout /t 3<br>
+                C:\webserver\Apache2\bin\httpd.exe -k start<br><br>
+                
+                <strong>MySQL Fallback (if SQLSRV fails):</strong><br>
+                cd C:\webserver\htdocs\bme4<br>
+                copy .env.mysql-ready .env<br>
+                C:\webserver\Apache2\bin\httpd.exe -k restart
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📞 Access URLs</h2>
+            <ul>
+                <li><strong>This Page:</strong> http://192.168.0.21/bme4/public/diagnostic/</li>
+                <li><strong>Extension Check:</strong> http://192.168.0.21/bme4/public/diagnostic/check-extensions.php</li>
+                <li><strong>PHP Info:</strong> http://192.168.0.21/bme4/public/diagnostic/phpinfo.php</li>
+                <li><strong>BME4 Home:</strong> http://192.168.0.21/bme4/public/</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>💡 Repository Integration</h2>
+            <p><strong>Problem Solved:</strong> The original diagnostic files were created in the htdocs root but weren't tracked by Git. When you run <code>git pull origin main</code>, those files get lost.</p>
+            
+            <p><strong>Solution:</strong> These diagnostic tools are now located in <code>htdocs/bme4/public/diagnostic/</code> and are part of the BME4 application, so they'll be included in Git commits and survive repository updates.</p>
+        </div>
+    </div>
+</body>
+</html>
