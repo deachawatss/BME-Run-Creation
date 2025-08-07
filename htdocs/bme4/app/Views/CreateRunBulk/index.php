@@ -560,7 +560,7 @@ $(document).ready(function() {
                                 render: function(data) {
                                     if (data) {
                                         var date = new Date(data);
-                                        return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+                                        return date.toLocaleDateString();
                                     }
                                     return '-';
                                 }
@@ -836,6 +836,14 @@ $(document).ready(function() {
     // Reset modal state when modal is closed
     $('#modal-batch-selection').on('hidden.bs.modal', function() {
         resetModalState();
+    });
+    
+    // Auto-focus search field when modal is shown
+    $('#modal-batch-selection').on('shown.bs.modal', function() {
+        // Focus on the DataTable search input field
+        setTimeout(function() {
+            $('#batch-selection-table_filter input[type="search"]').focus();
+        }, 100);
     });
     
     // Delete button - Deletes ALL rows with the same RunNo

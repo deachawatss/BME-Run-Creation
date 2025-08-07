@@ -590,7 +590,7 @@ $(document).ready(function() {
                                 render: function(data) {
                                     if (data) {
                                         var date = new Date(data);
-                                        return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+                                        return date.toLocaleDateString();
                                     }
                                     return '-';
                                 }
