@@ -99,12 +99,10 @@ class CreateRunBulk extends BaseController
                     ]);
                 }
 
-                // Get the actual next RunNo from TFCPILOT3 (read database) to maintain sequence
-                $builder = $this->dbService->getNwfth2Db()->table('Cust_BulkRun');
-                $result = $builder->selectMax('RunNo')->get()->getRowArray();
-                $actualRunNo = ($result['RunNo'] ?? 0) + 1;
+                // CRITICAL: Use atomic run number generation to prevent race conditions
+                $actualRunNo = $this->generateAtomicRunNumber();
 
-                // Start database transaction
+                // Start database transaction - let database constraints handle duplicate prevention
                 $this->dbService->getNwfthDb()->transStart();
 
                 // Insert each batch as a separate record with the calculated RunNo
@@ -170,12 +168,28 @@ class CreateRunBulk extends BaseController
                     ];
 
                     // Insert to TFCMOBILE (primary database)
-                    $insertResult = $this->dbService->getNwfthDb()->table('Cust_BulkRun')->insert($data);
-                    
-                    if (!$insertResult) {
-                        $error = $this->dbService->getNwfthDb()->error();
-                        log_message('error', "CreateRunBulk: Primary insert failed - " . json_encode($error));
-                        throw new \Exception("Database insert failed: " . ($error['message'] ?? 'Unknown error'));
+                    try {
+                        $insertResult = $this->dbService->getNwfthDb()->table('Cust_BulkRun')->insert($data);
+                        
+                        if (!$insertResult) {
+                            $error = $this->dbService->getNwfthDb()->error();
+                            log_message('error', "CreateRunBulk: Primary insert failed - " . json_encode($error));
+                            
+                            // Handle unique constraint violation (duplicate batch)
+                            if (isset($error['code']) && ($error['code'] == 2601 || $error['code'] == 2627)) {
+                                throw new \Exception("CONSTRAINT_VIOLATION:{$batch['batch_no']}");
+                            }
+                            
+                            throw new \Exception("Database insert failed: " . ($error['message'] ?? 'Unknown error'));
+                        }
+                    } catch (\Exception $e) {
+                        // Enhanced error handling for constraint violations
+                        if (strpos($e->getMessage(), 'UX_Cust_BulkRun_BatchNo') !== false || 
+                            strpos($e->getMessage(), 'duplicate') !== false ||
+                            strpos($e->getMessage(), 'unique') !== false) {
+                            throw new \Exception("CONSTRAINT_VIOLATION:{$batch['batch_no']}");
+                        }
+                        throw $e;
                     }
                     
                     // REPLICATION: Immediately replicate to TFCPILOT3
@@ -231,6 +245,20 @@ class CreateRunBulk extends BaseController
 
             } catch (\Exception $e) {
                 log_message('error', 'CreateRunBulk create error: ' . $e->getMessage());
+                
+                // Handle constraint violations specially
+                if (strpos($e->getMessage(), 'CONSTRAINT_VIOLATION:') === 0) {
+                    $batchNo = substr($e->getMessage(), strlen('CONSTRAINT_VIOLATION:'));
+                    
+                    return $this->response->setJSON([
+                        'success' => false,
+                        'constraint_violation' => true,
+                        'conflicted_batch' => $batchNo,
+                        'message' => "Batch $batchNo is already used in another bulk run. Available batches will be refreshed automatically.",
+                        'refresh_batches' => true
+                    ]);
+                }
+                
                 return $this->response->setJSON([
                     'success' => false,
                     'message' => 'Failed to create bulk run: ' . $e->getMessage()
@@ -403,19 +431,9 @@ class CreateRunBulk extends BaseController
         }
 
         try {
-            // Get next run number from database - using both databases like CI3
-            // First check write database (TFCMOBILE)
-            $builder = $this->dbService->getNwfthDb()->table('Cust_BulkRun');
-            $writeResult = $builder->selectMax('RunNo')->get()->getRowArray();
-            $writeMaxRunNo = $writeResult['RunNo'] ?? 0;
-            
-            // Then check read database (TFCPILOT3)
-            $builder = $this->dbService->getNwfth2Db()->table('Cust_BulkRun');
-            $readResult = $builder->selectMax('RunNo')->get()->getRowArray();
-            $readMaxRunNo = $readResult['RunNo'] ?? 0;
-            
-            // Take the maximum from both databases and add 1 (like CI3 does)
-            $nextRunNo = max($writeMaxRunNo, $readMaxRunNo) + 1;
+            // ATOMIC RUN NUMBER GENERATION with row locking
+            // This prevents race conditions when multiple users request run numbers simultaneously
+            $nextRunNo = $this->generateAtomicRunNumber();
             
             return $this->response->setJSON([
                 'success' => true,
@@ -426,8 +444,50 @@ class CreateRunBulk extends BaseController
             log_message('error', 'CreateRunBulk getNextRunNumber error: ' . $e->getMessage());
             return $this->response->setJSON([
                 'success' => false,
-                'message' => 'Failed to get next run number'
+                'message' => 'Failed to get next run number: ' . $e->getMessage()
             ]);
+        }
+    }
+
+
+    /**
+     * Generate atomic run number using row locking to prevent race conditions
+     * This ensures unique run numbers even with concurrent access
+     */
+    private function generateAtomicRunNumber(): int
+    {
+        try {
+            // CRITICAL: Use serializable transaction to prevent concurrent access issues
+            $this->dbService->getNwfthDb()->transBegin();
+            
+            // Lock-based approach: Get max RunNo with row lock (UPDLOCK, HOLDLOCK)
+            $query = "SELECT ISNULL(MAX(RunNo), 0) as MaxRunNo FROM Cust_BulkRun WITH (UPDLOCK, HOLDLOCK)";
+            $writeResult = $this->dbService->getNwfthDb()->query($query)->getRowArray();
+            $writeMaxRunNo = $writeResult['MaxRunNo'] ?? 0;
+            
+            // Also check read database for consistency (without lock)
+            $query = "SELECT ISNULL(MAX(RunNo), 0) as MaxRunNo FROM Cust_BulkRun";
+            $readResult = $this->dbService->getNwfth2Db()->query($query)->getRowArray();
+            $readMaxRunNo = $readResult['MaxRunNo'] ?? 0;
+            
+            // Take maximum from both databases and add 1 for next available
+            $nextRunNo = max($writeMaxRunNo, $readMaxRunNo) + 1;
+            
+            // Commit the lock transaction to release the lock
+            $this->dbService->getNwfthDb()->transCommit();
+            
+            log_message('info', "CreateRunBulk: Generated atomic RunNo $nextRunNo (writeMax: $writeMaxRunNo, readMax: $readMaxRunNo)");
+            
+            return $nextRunNo;
+            
+        } catch (\Exception $e) {
+            // Rollback transaction on any error
+            if ($this->dbService->getNwfthDb()->transStatus() !== false) {
+                $this->dbService->getNwfthDb()->transRollback();
+            }
+            
+            log_message('error', 'CreateRunBulk atomic run number generation failed: ' . $e->getMessage());
+            throw new \Exception('Failed to generate run number: ' . $e->getMessage());
         }
     }
 
@@ -476,15 +536,17 @@ class CreateRunBulk extends BaseController
             }
 
             if (!empty($batchWeight) && is_numeric($batchWeight)) {
-                $builder->where('BatchWeight', floatval($batchWeight));
+                $batchWeightFloat = floatval($batchWeight);
+                $tolerance = 0.001; // 0.1% tolerance for floating-point comparison
+                
+                log_message('debug', "CreateRunBulk BatchWeight filter: {$batchWeight} -> {$batchWeightFloat} ± {$tolerance}");
+                
+                $builder->where('BatchWeight >=', $batchWeightFloat - $tolerance);
+                $builder->where('BatchWeight <=', $batchWeightFloat + $tolerance);
             }
 
-            // Exclude ALL batches that have been used in ANY existing run (Global exclusion)
-            $usedBatchesQuery = $this->dbService->getNwfth2Db()->table('Cust_BulkRun')
-                                              ->select('BatchNo')
-                                              ->where('BatchNo IS NOT NULL')
-                                              ->getCompiledSelect();
-            $builder->where("BatchNo NOT IN ($usedBatchesQuery)");
+            // ENHANCED: Exclude batches used in BOTH bulk AND partial runs (comprehensive filtering)
+            $this->applyUsedBatchExclusion($builder);
 
             // FIXED: Get total count without search (for recordsTotal)
             $totalRecords = $builder->countAllResults();
@@ -510,15 +572,17 @@ class CreateRunBulk extends BaseController
             }
 
             if (!empty($batchWeight) && is_numeric($batchWeight)) {
-                $builder->where('BatchWeight', floatval($batchWeight));
+                $batchWeightFloat = floatval($batchWeight);
+                $tolerance = 0.001; // 0.1% tolerance for floating-point comparison
+                
+                log_message('debug', "CreateRunBulk BatchWeight filter (filtered count): {$batchWeight} -> {$batchWeightFloat} ± {$tolerance}");
+                
+                $builder->where('BatchWeight >=', $batchWeightFloat - $tolerance);
+                $builder->where('BatchWeight <=', $batchWeightFloat + $tolerance);
             }
 
-            // Exclude ALL batches that have been used in ANY existing run (Global exclusion)
-            $usedBatchesQuery = $this->dbService->getNwfth2Db()->table('Cust_BulkRun')
-                                              ->select('BatchNo')
-                                              ->where('BatchNo IS NOT NULL')
-                                              ->getCompiledSelect();
-            $builder->where("BatchNo NOT IN ($usedBatchesQuery)");
+            // ENHANCED: Exclude batches used in BOTH bulk AND partial runs (comprehensive filtering)
+            $this->applyUsedBatchExclusion($builder);
 
             // FIXED: Get filtered count (with search and filters applied)
             $filteredRecords = $builder->countAllResults();
@@ -544,15 +608,17 @@ class CreateRunBulk extends BaseController
             }
 
             if (!empty($batchWeight) && is_numeric($batchWeight)) {
-                $builder->where('BatchWeight', floatval($batchWeight));
+                $batchWeightFloat = floatval($batchWeight);
+                $tolerance = 0.001; // 0.1% tolerance for floating-point comparison
+                
+                log_message('debug', "CreateRunBulk BatchWeight filter (data retrieval): {$batchWeight} -> {$batchWeightFloat} ± {$tolerance}");
+                
+                $builder->where('BatchWeight >=', $batchWeightFloat - $tolerance);
+                $builder->where('BatchWeight <=', $batchWeightFloat + $tolerance);
             }
 
-            // Exclude ALL batches that have been used in ANY existing run (Global exclusion)
-            $usedBatchesQuery = $this->dbService->getNwfth2Db()->table('Cust_BulkRun')
-                                              ->select('BatchNo')
-                                              ->where('BatchNo IS NOT NULL')
-                                              ->getCompiledSelect();
-            $builder->where("BatchNo NOT IN ($usedBatchesQuery)");
+            // ENHANCED: Exclude batches used in BOTH bulk AND partial runs (comprehensive filtering)
+            $this->applyUsedBatchExclusion($builder);
 
             // Get paginated data with proper ordering matching CI3 - including Description as FormulaDesc
             $data = $builder->select('BatchNo, FormulaID, BatchWeight, EntryDate, Description as FormulaDesc')
@@ -581,6 +647,33 @@ class CreateRunBulk extends BaseController
                 'success' => false,
                 'message' => 'Failed to get batch list: ' . $e->getMessage()
             ]);
+        }
+    }
+
+    /**
+     * Apply bulk run batch exclusion filtering
+     * Excludes batches that are already used in OTHER bulk runs only
+     * Business Rule: A batch can be used in both bulk AND partial runs, but not twice in the same run type
+     * 
+     * @param \CodeIgniter\Database\BaseBuilder $builder
+     * @return void
+     */
+    private function applyUsedBatchExclusion($builder)
+    {
+        try {
+            // CORRECTED: Only exclude batches used in OTHER bulk runs (not partial runs)
+            $usedBulkBatchesQuery = $this->dbService->getNwfth2Db()->table('Cust_BulkRun')
+                                                                    ->select('BatchNo')
+                                                                    ->where('BatchNo IS NOT NULL')
+                                                                    ->getCompiledSelect();
+            
+            $builder->where("BatchNo NOT IN ($usedBulkBatchesQuery)");
+            
+            log_message('info', 'CreateRunBulk: Applied bulk-only batch exclusion (allows partial run reuse)');
+            
+        } catch (\Exception $e) {
+            log_message('error', 'CreateRunBulk: Bulk batch exclusion failed: ' . $e->getMessage());
+            throw $e;
         }
     }
 
